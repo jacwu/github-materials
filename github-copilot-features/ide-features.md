@@ -14,6 +14,7 @@
 | Inline Chat              | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Multiple Models in Inline Chat | ✅       | ✅             | ✅             | ❌     | ❌       |
 | Chat                     | ✅             | ✅             | ✅             | ✅     | ❌       |
+| Slash Commands           | ✅             | ✅             | ✅             | ✅     | ❌
 | Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
 | @workspace               | ✅             | ✅             | @project      | ❌     | ❌       |
