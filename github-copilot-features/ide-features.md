@@ -14,15 +14,16 @@
 | Inline Chat              | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Multiple Models in Inline Chat | ✅       | ✅             | ✅             | ❌     | ❌       |
 | Chat                     | ✅             | ✅             | ✅             | ✅     | ❌       |
-| Slash Commands           | ✅             | ✅             | ✅             | ✅     | ❌
+| Slash Commands           | ✅             | ✅             | ✅             | ✅     | ❌       |
 | Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
-| @workspace               | ✅             | ✅             | @project      | ❌     | ❌       |
+| @workspace               | ✅             | ✅             | @project        | ❌     | ❌       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Multiple Files Edit      | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Agent mode               | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅(Insiders)   | ✅(enrolling)  | ❌             | ❌     | ❌       |
+| Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 
 # GitHub Copilot Customization Features Comparison
 
@@ -43,6 +44,14 @@
 | Generate Commit Message  | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Copilot in Debug         | ❌       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Compile       | ❌       | ✅             | ❌         | ❌     | ❌       |
+
+# GitHub Copilot Review Features Comparison
+
+| Code Review Features     | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
+|--------------------------|---------|---------------|-----------|-------|---------|
+| Ask Review in Chat       | ✅       | ✅             | ✅         | ✅     | ❌       |
+| Review Selection         | ✅       | ❌             | ❌         | ❌     | ❌       |
+| Review Commit Change     | ✅       | ✅             | ❌         | ❌     | ❌       |
 
 
 
