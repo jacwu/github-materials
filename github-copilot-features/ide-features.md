@@ -45,7 +45,7 @@
 | Copilot in Debug         | ❌       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Compile       | ❌       | ✅             | ❌         | ❌     | ❌       |
 
-# GitHub Copilot Review Features Comparison
+# GitHub Copilot Code Review Features Comparison
 
 | Code Review Features     | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------|---------|---------------|-----------|-------|---------|
