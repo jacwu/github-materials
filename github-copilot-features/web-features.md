@@ -8,3 +8,5 @@
 | Code guideline for code review    | ❌        | ✅          |
 | GitHub Models                     | ✅        | ✅          |
 | Explain failed action job         | ✅        | ✅          |
+| Personal Instructions             | ✅        | ✅          |
+| PR Review                         | ✅        | ✅          |

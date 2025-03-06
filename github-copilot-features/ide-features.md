@@ -34,6 +34,7 @@
 | Custom Test Generation Instruction   | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom Commit Message Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
+| Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
 
 # GitHub Copilot Misc Features Comparison
@@ -42,6 +43,7 @@
 |--------------------------|---------|---------------|-----------|-------|---------|
 | Code Referencing         | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Generate Commit Message  | ✅       | ✅             | ✅         | ❌     | ❌       |
+| Generate PR Description  | ✅       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Debug         | ❌       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Compile       | ❌       | ✅             | ❌         | ❌     | ❌       |
 
@@ -52,6 +54,7 @@
 | Ask Review in Chat       | ✅       | ✅             | ✅         | ✅     | ❌       |
 | Review Selection         | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Review Commit Change     | ✅       | ✅             | ❌         | ❌     | ❌       |
+| PR Review                | ✅       | ❌             | ❌         | ❌     | ❌       |
 
 
 

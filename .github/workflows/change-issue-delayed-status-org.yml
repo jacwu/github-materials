@@ -1,0 +1,195 @@
+# follow sample in https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions
+# https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions
+# https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables
+# https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects#finding-information-about-items-in-a-project
+
+name: Change Issue Delay Status for Organization Project
+on:
+  workflow_dispatch: # Keep only manual trigger option
+env:
+  GH_TOKEN: ${{ secrets.YOUR_TOKEN }}
+  ORGANIZATION: ${{ secrets.ORGANIZATION }}
+  PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
+jobs:
+  track_pr:
+    runs-on: ubuntu-latest
+    steps:
+    # Sets environment variables for this step.
+    #
+    # If you are using a personal access token, replace `YOUR_TOKEN` with the name of the secret that contains your personal access token.
+    #
+    # Replace `YOUR_ORGANIZATION` with the name of your organization. For example, `octo-org`.
+    #
+    # Replace `YOUR_PROJECT_NUMBER` with your project number. To find the project number, look at the project URL. For example, `https://github.com/orgs/octo-org/projects/5` has a project number of 5.
+      - name: Get project data
+        # Uses [GitHub CLI](https://cli.github.com/manual/) to query the API for the ID of the project and return the name and ID of the first 20 fields in the project. `fields` returns a union and the query uses inline fragments (`... on`) to return information about any `ProjectV2Field` and `ProjectV2SingleSelectField` fields. The response is stored in a file called `project_data.json`.
+        run: |
+          gh api graphql -f query='
+            query($org: String!, $number: Int!) {
+              organization(login: $org){
+                projectV2(number: $number) {
+                  id
+                  fields(first:20) {
+                    nodes {
+                      ... on ProjectV2Field {
+                        id
+                        name
+                      }
+                      ... on ProjectV2SingleSelectField {
+                        id
+                        name
+                        options {
+                          id
+                          name
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }' -f org=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
+
+          # Parses the response from the API query and stores the relevant IDs as environment variables. Modify this to get the ID for different fields or options. For example:
+          #
+          # - To get the ID of a field called `Team`, add `echo 'TEAM_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Team") | .id' project_data.json) >> $GITHUB_ENV`.
+          # - To get the ID of an option called `Octoteam` for the `Team` single select field, add `echo 'OCTOTEAM_OPTION_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Team") |.options[] | select(.name=="Octoteam") |.id' project_data.json) >> $GITHUB_ENV`.
+          #
+          # **Note:** This workflow assumes that you have a project with a single select field called "Status" that includes an option called "Todo" and a date field called "Date posted". You must modify this section to match the fields that are present in your table.
+          
+          echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
+          echo 'DATE_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "End date") | .id' project_data.json) >> $GITHUB_ENV
+          echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
+          echo 'DELAYED_OPTION_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="Delayed") |.id' project_data.json) >> $GITHUB_ENV
+
+          
+      - name: Get all issues in project
+        env:
+          GH_TOKEN: ${{ secrets.YOUR_TOKEN }}
+        run: |
+            # Use GraphQL API to get all issues in the project with their End date and Status field values
+            gh api graphql -f query='
+            query($project:ID!) {
+              node(id: $project) {
+              ... on ProjectV2 {
+                items(first: 100) {
+                nodes {
+                  id
+                  content {
+                  ... on Issue {
+                    id
+                    title
+                    number
+                    url
+                  }
+                  }
+                  fieldValues(first: 100) {
+                  nodes {
+                    ... on ProjectV2ItemFieldDateValue {
+                    field {
+                      ... on ProjectV2Field {
+                      id
+                      name
+                      }
+                    }
+                    date
+                    }
+                    ... on ProjectV2ItemFieldSingleSelectValue {
+                    field {
+                      ... on ProjectV2SingleSelectField {
+                      id
+                      name
+                      }
+                    }
+                    name
+                    optionId
+                    }
+                  }
+                  }
+                }
+                }
+              }
+              }
+            }' -f project=$PROJECT_ID > project_issues.json
+            
+      - name: Filter issues by criteria
+        run: |
+            # Get current date
+            current_date=$(date +"%Y-%m-%d")
+            echo "Current date: $current_date"
+            
+            # Extract issues from project_issues.json that meet the criteria:
+            # 1. End date field is earlier than current date
+            # 2. Status field value is not "Delayed"
+            jq --arg current_date "$current_date" '
+            .data.node.items.nodes[] | 
+            # Extract End date and Status field values
+            . as $item |
+            ($item.fieldValues.nodes[] | select(.field.name == "End date") | .date) as $end_date |
+            ($item.fieldValues.nodes[] | select(.field.name == "Status") | .name) as $status |
+            # Check if criteria are met
+            if $end_date != null and $end_date < $current_date and $status != null and $status != "Delayed" 
+            then {id: $item.id}
+            else empty
+            end
+            ' project_issues.json > issues_ids.json
+            
+            echo "Filtered issues:"
+            cat issues_ids.json
+            
+            # Check if any matching issues were found
+            if [ ! -s issues_ids.json ]; then
+              echo "No issues found that match the criteria"
+            fi
+
+# Sets environment variables for this step. Replace `YOUR_TOKEN` with the name of the secret that contains your personal access token.
+      - name: Set fields for each issue
+        # Update status to 'Delayed' for each filtered issue
+        run: |
+          # Read all filtered issues
+          # Convert to array format using jq
+          issues=$(jq -s '.' issues_ids.json)
+                    
+          # Iterate through each issue and update its fields
+          echo "Starting to update status for all filtered issues..."
+          for issue in $(echo "$issues" | jq -c '.[]'); do
+            item_id=$(echo $issue | jq -r '.id')
+            echo "Processing item_id: $item_id"
+               
+            # Set Status field for the current issue
+            gh api graphql -f query='
+              mutation (
+                $project: ID!
+                $item: ID!
+                $status_field: ID!
+                $status_value: String!
+              ) {
+                set_status: updateProjectV2ItemFieldValue(input: {
+                  projectId: $project
+                  itemId: $item
+                  fieldId: $status_field
+                  value: {
+                    singleSelectOptionId: $status_value
+                    }
+                }) {
+                  projectV2Item {
+                    id
+                    }
+                }
+              }' -f project=${{ env.PROJECT_ID }} -f item=$item_id -f status_field=${{ env.STATUS_FIELD_ID }} -f status_value=${{ env.DELAYED_OPTION_ID }} --silent
+            
+            echo "Issue updated successfully"
+          done
+          
+          echo "All issues have been updated"
+          
+      # Upload artifacts
+      - name: Upload JSON files as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-data-files
+          path: |
+            project_data.json
+            project_issues.json
+            issues_ids.json
+          retention-days: 7
+

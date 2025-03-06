@@ -1,8 +1,15 @@
 # follow sample in https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions
+# https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions
+# https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables
+# https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects#finding-information-about-items-in-a-project
 
-name: Change Issue Delay Status
+name: Change Issue Delay Status for User Project
 on:
   workflow_dispatch: # Keep only manual trigger option
+env:
+  GH_TOKEN: ${{ secrets.YOUR_TOKEN }}
+  USERNAME: ${{ github.actor }} 
+  PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
 jobs:
   track_pr:
     runs-on: ubuntu-latest
@@ -11,19 +18,15 @@ jobs:
     #
     # If you are using a personal access token, replace `YOUR_TOKEN` with the name of the secret that contains your personal access token.
     #
-    # Replace `YOUR_ORGANIZATION` with the name of your organization. For example, `octo-org`.
+    # Replace `YOUR_USERNAME` with your GitHub username. For example, `octocat`.
     #
-    # Replace `YOUR_PROJECT_NUMBER` with your project number. To find the project number, look at the project URL. For example, `https://github.com/orgs/octo-org/projects/5` has a project number of 5.
+    # Replace `YOUR_PROJECT_NUMBER` with your project number. To find the project number, look at the project URL. For example, `https://github.com/users/octocat/projects/1` has a project number of 1.
       - name: Get project data
-        env:
-          GH_TOKEN: ${{ secrets.YOUR_TOKEN }}
-          ORGANIZATION: ${{ secrets.ORGANIZATION }}
-          PROJECT_NUMBER: ${{ secrets.PROJECT_NUMBER }}
-        # Uses [GitHub CLI](https://cli.github.com/manual/) to query the API for the ID of the project and return the name and ID of the first 20 fields in the project. `fields` returns a union and the query uses inline fragments (`... on`) to return information about any `ProjectV2Field` and `ProjectV2SingleSelectField` fields. The response is stored in a file called `project_data.json`.
+        # Uses [GitHub CLI](https://cli.github.com/manual/) to query the API for the ID of the project and return the name and ID of the first 20 fields in the project.
         run: |
           gh api graphql -f query='
-            query($org: String!, $number: Int!) {
-              organization(login: $org){
+            query($user: String!, $number: Int!) {
+              user(login: $user){
                 projectV2(number: $number) {
                   id
                   fields(first:20) {
@@ -44,19 +47,14 @@ jobs:
                   }
                 }
               }
-            }' -f org=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
+            }' -f user=$USERNAME -F number=$PROJECT_NUMBER > project_data.json
 
-          # Parses the response from the API query and stores the relevant IDs as environment variables. Modify this to get the ID for different fields or options. For example:
-          #
-          # - To get the ID of a field called `Team`, add `echo 'TEAM_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Team") | .id' project_data.json) >> $GITHUB_ENV`.
-          # - To get the ID of an option called `Octoteam` for the `Team` single select field, add `echo 'OCTOTEAM_OPTION_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Team") |.options[] | select(.name=="Octoteam") |.id' project_data.json) >> $GITHUB_ENV`.
-          #
-          # **Note:** This workflow assumes that you have a project with a single select field called "Status" that includes an option called "Todo" and a date field called "Date posted". You must modify this section to match the fields that are present in your table.
+          # Parses the response from the API query and stores the relevant IDs as environment variables.
           
-          echo 'PROJECT_ID='$(jq '.data.organization.projectV2.id' project_data.json) >> $GITHUB_ENV
-          echo 'DATE_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "End date") | .id' project_data.json) >> $GITHUB_ENV
-          echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
-          echo 'DELAYED_OPTION_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="Delayed") |.id' project_data.json) >> $GITHUB_ENV
+          echo 'PROJECT_ID='$(jq '.data.user.projectV2.id' project_data.json) >> $GITHUB_ENV
+          echo 'DATE_FIELD_ID='$(jq '.data.user.projectV2.fields.nodes[] | select(.name== "End date") | .id' project_data.json) >> $GITHUB_ENV
+          echo 'STATUS_FIELD_ID='$(jq '.data.user.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
+          echo 'DELAYED_OPTION_ID='$(jq '.data.user.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="Delayed") |.id' project_data.json) >> $GITHUB_ENV
 
           
       - name: Get all issues in project
@@ -139,9 +137,7 @@ jobs:
             fi
 
 # Sets environment variables for this step. Replace `YOUR_TOKEN` with the name of the secret that contains your personal access token.
-      - name: Set fields
-        env:
-          GH_TOKEN: ${{ secrets.YOUR_TOKEN }}
+      - name: Set fields for each issue
         # Update status to 'Delayed' for each filtered issue
         run: |
           # Read all filtered issues
@@ -174,14 +170,14 @@ jobs:
                     id
                     }
                 }
-              }' -f project=$PROJECT_ID -f item=$item_id -f status_field=$STATUS_FIELD_ID -f status_value=${{ env.DELAYED_OPTION_ID }} --silent
+              }' -f project=${{ env.PROJECT_ID }} -f item=$item_id -f status_field=${{ env.STATUS_FIELD_ID }} -f status_value=${{ env.DELAYED_OPTION_ID }} --silent
             
             echo "Issue updated successfully"
           done
           
           echo "All issues have been updated"
           
-      # Add new step to upload artifacts
+      # Upload artifacts
       - name: Upload JSON files as artifacts
         uses: actions/upload-artifact@v4
         with:
