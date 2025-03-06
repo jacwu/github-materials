@@ -13,7 +13,7 @@
 |--------------------------|---------------|---------------|---------------|-------|---------|
 | Inline Chat              | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Multiple Models in Inline Chat | ✅       | ✅             | ✅             | ❌     | ❌       |
-| Chat                     | ✅             | ✅             | ✅             | ✅     | ❌       |
+| Chat                     | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ❌       |
 | Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
