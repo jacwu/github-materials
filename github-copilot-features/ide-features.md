@@ -22,7 +22,7 @@
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Multiple Files Edit      | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Agent mode               | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
-| Vision                   | ✅(Insiders)   | ✅(enrolling)  | ❌             | ❌     | ❌       |
+| Vision                   | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 
 # GitHub Copilot Customization Features Comparison

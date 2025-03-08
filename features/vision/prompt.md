@@ -1,0 +1,1 @@
+create SQL script to implement the following database in MSSQL
