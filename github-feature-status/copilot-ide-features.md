@@ -32,7 +32,7 @@
 | General Custom Instruction           | ✅       | ✅             | ❌         | ❌     | ❌       |
 | Custom Code Generation Instruction   | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom Test Generation Instruction   | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Custom Commit Message Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
+| Custom Commit Message Instruction    | ✅       | ✅             | ❌         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
@@ -54,7 +54,7 @@
 | Ask Review in Chat       | ✅       | ✅             | ✅         | ✅     | ❌       |
 | Review Selection         | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Review Commit Change     | ✅       | ✅             | ❌         | ❌     | ❌       |
-| PR Review                | ✅       | ❌             | ❌         | ❌     | ❌       |
+| PR Review                | ✅       | ✅             | ❌         | ❌     | ❌       |
 
 
 

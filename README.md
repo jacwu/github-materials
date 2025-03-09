@@ -22,9 +22,9 @@ The `features` folder contains example files and data to demonstrate different f
 - `vision/` - Examples of vision usage in github copilot
 
 
-## github-copilot-features
+## github-feature-status
 
-The `github-copilot-features` folder shows the main features of GitHub Copilot:
+The `github-feature-status` folder shows the main features of GitHub Copilot:
 
-- `ide-features.md` - Detailed comparison of Copilot features across different IDEs
-- `web-features.md` - Overview of GitHub Copilot features in web interface
+- `copilot-ide-features.md` - Detailed comparison of Copilot features across different IDEs
+- `copilot-web-features.md` - Overview of GitHub Copilot features in web interface
