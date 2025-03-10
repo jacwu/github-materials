@@ -2,7 +2,7 @@
 
 The `features` folder contains example files and data to demonstrate different functionalities and features:
 
-- `change-format/` - Example of converting data between different formats (CSV to Markdown)
+- `change-format/` - Example of converting data between different formats
 - `code-refactor/` - Examples of GitHub API client implementations and code refactoring
 - `code-referencing/` - Example of code referencing
 - `code-review/` - Example files for code review demonstrations
