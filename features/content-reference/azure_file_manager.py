@@ -1,5 +1,6 @@
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 from azure.core.exceptions import ResourceNotFoundError
+import os
 
 class AzureBlobFileManager:
     def __init__(self, connection_string: str, container_name: str):

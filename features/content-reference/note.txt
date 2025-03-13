@@ -1,5 +1,5 @@
-1, add reference file to context of chat
-2, add import in the file
-3, add reference file to context of edit
-4, use codespace in edit
+1, add import in the file
+2, add reference file to context
+3, add md file to the context
+4, use codebase in edit
 5, use agent
