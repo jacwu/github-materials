@@ -1,0 +1,23 @@
+"*":
+  # Ignore all `.env` files from all file system roots (Git and non-Git).
+  - "**/.env"
+  # Ignore any files in or below the `excludes` directory.
+  - "**/excludes/**"
+  # Ignore any files in the `/script` directory.
+  - "/script/*"
+  # Ignore files directly within directories such as `packages` or `packaged`.
+  - "**/package?/*"
+  # Ignore files in or below any `security` directories.
+  - "**/security/**"
+
+# In the `octo-repo` repository in this organization:
+octo-repo:
+  # Ignore the `/src/some-dir/kernel.rs` file.
+  - "/src/some-dir/kernel.rs"
+
+# In the `primer/react` repository on GitHub:
+https://github.com/primer/react.git:
+  # Ignore files called `secrets.json` anywhere in this repository.
+  - "secrets.json"
+  # Ignore files called `temp.rb` in or below the `/src` directory.
+  - "/src/**/temp.rb"
