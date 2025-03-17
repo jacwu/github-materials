@@ -1,0 +1,38 @@
+{
+    "github.copilot.chat.testGeneration.instructions": [
+        {
+            "file": ".github/copilot-test-generation-instructions.md"
+        }
+    ],
+    "git.autofetch": true,
+    "github.copilot.chat.reviewSelection.instructions": [
+    
+        {
+            "file": ".github/copilot-code-review-instructions.md"
+        }
+    ],
+    "chat.mcp.discovery.enabled": true,
+    "github.copilot.renameSuggestions.triggerAutomatically": false,
+    "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "python.createEnvironment.trigger": "off",
+    "chat.promptFiles": true,
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "file": ".github/copilot-code-generation-instructions.md"
+        }
+    ],
+    "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
+        {
+            "file": ".github/copilot-pull-request-description-instructions.md"
+        }
+    ],
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+
+        {
+            "file": ".github/copilot-commit-message-instructions.md"
+        }
+    ],
+    "extensions.ignoreRecommendations": true,
+    "github.copilot.advanced": {}
+}

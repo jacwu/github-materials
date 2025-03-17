@@ -10,3 +10,5 @@
 | Explain failed action job         | ✅        | ✅          |
 | Personal Instructions             | ✅        | ✅          |
 | PR Review                         | ✅        | ✅          |
+| Instant semantic code search indexing  | ✅        | ✅          |
+
