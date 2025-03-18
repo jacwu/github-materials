@@ -34,5 +34,28 @@
         }
     ],
     "extensions.ignoreRecommendations": true,
+    "mcp": {
+        "inputs": [],
+        "servers": {
+            "mcp-server-time": {
+                "command": "python",
+                "args": [
+                    "-m",
+                    "mcp_server_time",
+                    "--local-timezone=America/New_York"
+                ],
+                "env": {}
+            },
+            "mcp-server-fetch": {
+                "command": "python",
+                "args": [
+                    "-m",
+                    "mcp_server_fetch"
+                ],
+                "env": {}
+            }
+        }
+    },
+
     "github.copilot.advanced": {}
 }
