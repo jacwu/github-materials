@@ -20,10 +20,13 @@
 | @workspace               | ✅             | ✅             | @project        | ❌     | ❌       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Multiple Files Edit      | ✅             | ✅             | ❌             | ❌     | ❌       |
+| Multiple Files Edit      | ✅             | ✅             | ✅（nightly）  | ❌     | ❌       |
 | Agent mode               | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
+| Web Fetch                | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
+| MCP                      | ✅(Insiders）  | ❌             | ❌             | ❌     | ❌       |
+
 
 # GitHub Copilot Customization Features Comparison
 
@@ -55,7 +58,3 @@
 | Review Selection         | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Review Commit Change     | ✅       | ✅             | ❌         | ❌     | ❌       |
 | PR Review                | ✅       | ✅             | ❌         | ❌     | ❌       |
-
-
-
-

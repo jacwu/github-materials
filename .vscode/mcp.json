@@ -1,0 +1,59 @@
+{
+    "servers": {
+            "mcp-server-time": {
+                "command": "python",
+                "args": [
+                    "-m",
+                    "mcp_server_time",
+                    "--local-timezone=America/New_York",
+                ],
+                "env": {}
+            },
+            "mcp-server-fetch": {
+                "command": "python",
+                "args": [
+                    "-m",
+                    "mcp_server_fetch"
+                ],
+                "env": {}
+            },
+            // for macOS, use npx shown below instead of cmd
+            // "githuboMac": {
+            //     "command": "npx",
+            //     "args": [
+            //         "-y",
+            //         "@modelcontextprotocol/server-github"
+            //     ],
+            //     "env": {
+            //         "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+            //     }
+            // },
+            "github": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "npx",
+                    "-y",
+                    "@modelcontextprotocol/server-github"
+                ],
+                "env": {
+                    "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+                }
+            },
+            "filesystem": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "npx",
+                    "-y",
+                    "@modelcontextprotocol/server-filesystem",
+                    "c:\\users\\jacwu\\source"
+                ],
+                "env": {}
+            },
+            "my_mcp": {
+                "type": "sse",
+                "url": "http://127.0.0.1:3000/sse"
+            }
+    }
+}
