@@ -37,19 +37,22 @@
                     "@modelcontextprotocol/server-github"
                 ],
                 "env": {
-                    "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+                    "GITHUB_PERSONAL_ACCESS_TOKEN": "<github token>"
                 }
             },
-            "filesystem": {
+            "playwright": {
                 "command": "cmd",
                 "args": [
                     "/c",
                     "npx",
                     "-y",
-                    "@modelcontextprotocol/server-filesystem",
-                    "c:\\users\\jacwu\\source"
+                    "@executeautomation/playwright-mcp-server"
                 ],
                 "env": {}
+            },
+            "figma": {
+                "type": "sse",
+                "url": "http://127.0.0.1:3333/sse"
             },
             "my_mcp": {
                 "type": "sse",

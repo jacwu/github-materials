@@ -4,7 +4,7 @@ pip install mcp_server_time
 pip install mcp_server_fetch
 npm install -g @modelcontextprotocol/server-github
 npm install -g @modelcontextprotocol/server-filesystem
-
+npx figma-developer-mcp --figma-api-key=figmatoken
 
 # time
 what's the current time
@@ -21,3 +21,4 @@ list_allowed_directories, list_directory
 
 # customized mcp server
 python mcp_server.py
+

@@ -9,3 +9,5 @@ requests>=2.31.0
 black>=23.0.0
 azure-storage-blob>=12.16.0
 azure-core>=1.24.0
+selenium>=4.14.0
+webdriver-manager>=4.0.1

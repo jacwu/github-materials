@@ -17,10 +17,10 @@
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ❌       |
 | Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
-| @workspace               | ✅             | ✅             | @project        | ❌     | ❌       |
+| @workspace               | ✅             | ✅             | ✅@project     | ❌     | ❌       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Multiple Files Edit      | ✅             | ✅             | ✅（nightly）  | ❌     | ❌       |
+| Multiple Files Edit      | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Agent mode               | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
@@ -54,7 +54,7 @@
 
 | Code Review Features     | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------|---------|---------------|-----------|-------|---------|
-| Ask Review in Chat       | ✅       | ✅             | ✅         | ✅     | ❌       |
+| Ask Review in Chat       | ✅       | ✅             | ✅         | ✅     | ✅       |
 | Review Selection         | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Review Commit Change     | ✅       | ✅             | ❌         | ❌     | ❌       |
 | PR Review                | ✅       | ✅             | ❌         | ❌     | ❌       |
