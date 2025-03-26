@@ -1,81 +1,98 @@
 import logging
 import uvicorn
 from starlette.applications import Starlette
+from pathlib import Path
 from starlette.routing import Route
 from mcp.server import Server
 from mcp.server.sse import SseServerTransport
 from mcp.types import Tool, TextContent, ImageContent, EmbeddedResource
 import json
-from typing import Any, Sequence, Union
-import os
+from typing import Any, Sequence, Union, Dict, TypeVar, cast
 import asyncio
 from urllib.parse import quote_plus
 import httpx
-from datetime import datetime
 
-logger = logging.getLogger("sse-mcp-server")
+# Create logs directory if it doesn't exist
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
+# Configure logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.FileHandler("logs/mcp_server.log"), logging.StreamHandler()]
+)
+logger = logging.getLogger(__name__)
+
+T = TypeVar('T')
 
 class Weather:
-    def __init__(self, locale: str = 'en', unit: str = 'imperial'):
+    def __init__(self, locale: str = 'en', unit: str = 'imperial', timeout: float = 10.0):
         self.locale = locale
         self.unit = unit
+        self.timeout = timeout
 
-    async def get_forecast(self, location: str) -> str:
+    async def get_forecast(self, location: str) -> Dict[str, Any]:
+        """Get weather forecast for a specified location."""
         url = f'https://{self.locale}.wttr.in/{quote_plus(location)}?format=j1'
+        logger.info(f"Requesting weather data for location: {location}")
         return await self._fetch_url(url)
 
-    async def _fetch_url(self, url: str, raw: bool = False, max_retries: int = 3) -> str:
+    async def _fetch_url(self, url: str, raw: bool = False, max_retries: int = 3) -> Dict[str, Any]:
+        """Fetch data from URL with retry logic and proper error handling."""
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0',
             'Content-Type': 'application/json'
         }
 
         for attempt in range(max_retries):
-            async with httpx.AsyncClient() as client:
-                try:
+            try:
+                async with httpx.AsyncClient(timeout=self.timeout) as client:
                     response = await client.get(url, headers=headers)
-
-                    # log the response
-                    logging.info(f"Response status code: {response.status_code}")
-                    logging.info(f"Response content: {response.text}")
+                    
+                    # Log response details at debug level instead of info to avoid excessive logging
+                    logger.debug(f"Response from {url}: status={response.status_code}")
+                    
+                    # Handle special case for 404 responses that still contain valid content
                     if response.status_code == 404 and response.text:
-                        self.logger.warning(f'Got 404 but received content for URL: {url}')
-                        response_content = response.text
-                        if not raw:
-                            response_content = self._format_content(response.content, url)
-                        return response_content
-
+                        logger.warning(f'Got 404 but received content from URL: {url}')
+                        return self._process_response(response, raw, url)
+                    
+                    # Handle other status codes
                     response.raise_for_status()
-                    response_content = response.text
-
-                    if not raw:
-                        response_content = self._format_content(response.content, url)
-                    return response_content
-
-                except httpx.HTTPStatusError as e:
-                    if attempt == max_retries - 1:
-                        self.logger.error(f'HTTP error occurred: {e}')
-                        raise
-                    await asyncio.sleep(1 * (attempt + 1))  # exponential backoff
-                except httpx.RequestError as e:
-                    self.logger.error(f'Request error occurred: {e}')
+                    return self._process_response(response, raw, url)
+                    
+            except httpx.HTTPStatusError as e:
+                if attempt == max_retries - 1:
+                    logger.error(f'HTTP error occurred after {max_retries} attempts: {e}')
                     raise
-                except Exception as e:
-                    self.logger.error(f'An error occurred: {e}')
-                    raise
+                logger.warning(f'HTTP error on attempt {attempt+1}/{max_retries}: {e}. Retrying...')
+                await asyncio.sleep(1 * (2 ** attempt))  # Better exponential backoff
+            except httpx.RequestError as e:
+                logger.error(f'Request error for {url}: {e}')
+                raise
+            except Exception as e:
+                logger.error(f'Unexpected error fetching {url}: {e}', exc_info=True)
+                raise
 
-    def _format_content(self, content: Union[str, bytes], url: str) -> str:
+    def _process_response(self, response: httpx.Response, raw: bool, url: str) -> Dict[str, Any]:
+        """Process HTTP response and return formatted content."""
+        if raw:
+            return cast(Dict[str, Any], response.text)
+        return self._format_content(response.content, url)
+
+    def _format_content(self, content: Union[str, bytes], url: str) -> Dict[str, Any]:
+        """Format and parse JSON content from response."""
         try:
             if isinstance(content, bytes):
                 content = content.decode('utf-8')
-            data = json.loads(content)
-            return data
+            return json.loads(content)
         except json.JSONDecodeError:
-            self.logger.error(f"Failed to decode JSON from {url}")
-            raise
+            logger.error(f"Failed to decode JSON from {url}")
+            raise ValueError(f"Invalid JSON response from weather service: {content[:100]}...")
         except Exception as e:
-            self.logger.error(f"Error formatting content from {url}: {str(e)}")
-            raise
+            logger.error(f"Error formatting content from {url}: {str(e)}")
+            raise ValueError(f"Failed to process weather data: {str(e)}")
 
 
 class UserGenerator:
