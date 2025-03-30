@@ -33,8 +33,10 @@ The `features` folder contains example files and data to demonstrate different f
 ## scenarios
 
 The `scenarios` folder contains use cases in different scenarios:
+- `database/` - GitHub Copilot use cases in sql script generation with mcp
+- `ui-automation/` - GitHub Copilot use cases in UI automation script generation
+- `ui-design-dalle/` - GitHub Copilot use cases in image generation automatically using dalle 3
+- `ui-design-figma/` - GitHub Copilot use cases in html generation with figma design
 
-- `ui-automation/` - github copilot use case in ui automation
-- `ui-design/` - github copilot use case in ui design
 
 

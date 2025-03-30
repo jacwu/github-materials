@@ -4,7 +4,6 @@
 |--------------------------|---------|---------------|-----------|-------|---------|
 | Code Completion          | ✅       | ✅             | ✅         | ✅     | ✅       |
 | Next Edit Suggestion     | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Switch completion model  | ✅       | ❌             | ✅         | ❌     | ❌       |
 | Content Exclusion        | ✅       | ✅             | ✅         | ✅     | ❌       |
 
 # GitHub Copilot Chat/Edit Features Comparison
@@ -13,15 +12,15 @@
 |--------------------------|---------------|---------------|---------------|-------|---------|
 | Inline Chat              | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Multiple Models in Inline Chat | ✅       | ✅             | ✅             | ❌     | ❌       |
-| Chat                     | ✅             | ✅             | ✅             | ✅     | ✅       |
-| Slash Commands           | ✅             | ✅             | ✅             | ✅     | ❌       |
-| Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ❌       |
+| Chat Mode                | ✅             | ✅             | ✅             | ✅     | ✅       |
+| Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       |
+| Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ✅       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
 | @workspace               | ✅             | ✅             | ✅@project     | ❌     | ❌       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Multiple Files Edit      | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Agent mode               | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
+| Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
+| Agent Mode               | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Web Fetch                | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |

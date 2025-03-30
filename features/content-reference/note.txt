@@ -1,5 +1,5 @@
 1, add import in the file
-2, add reference file to context
+2, add referenced file to context
 3, add md file to the context
-4, use codebase in edit
-5, use agent
+4, use codebase in edit mode
+5, use agent mode

@@ -9,8 +9,8 @@ class Car {
     constructor(brand: string, year: number, model: string) {
         this.brand = brand;
         this.year = year;
-            this.model = model;
-        }
+        this.model = model;
+    }
 
     // getter and setter
     public getName(): string {
