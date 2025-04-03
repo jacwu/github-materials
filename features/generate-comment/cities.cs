@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+///
 namespace CityCompositionExample
 {
     public class Car
