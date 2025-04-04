@@ -37,7 +37,7 @@
                     "@modelcontextprotocol/server-github"
                 ],
                 "env": {
-                    "GITHUB_PERSONAL_ACCESS_TOKEN": "<github token>"
+                    "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
                 }
             },
             "playwright": {
@@ -50,6 +50,17 @@
                 ],
                 "env": {}
             },
+            "dalle3": {
+                "command": "node",
+                "args": [
+                    "<fullpath>\\build\\index.js"
+                ],
+                "env": {
+                    "AZURE_OPENAI_ENDPOINT": "<endpoint>",
+                    "AZURE_OPENAI_API_KEY": "<api_key>",
+                    "AZURE_OPENAI_DEPLOYMENT_NAME": "<deployment_name>"
+                }
+            },
             "figma": {
                 "type": "sse",
                 "url": "http://127.0.0.1:3333/sse"
@@ -57,6 +68,23 @@
             "my_mcp": {
                 "type": "sse",
                 "url": "http://127.0.0.1:3000/sse"
+            },
+            "mcp_server_mysql": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "npx",
+                    "-y",
+                    "@benborla29/mcp-server-mysql"
+                ],
+                "env": {
+                    "MYSQL_HOST": "<host>",
+                    "MYSQL_PORT": "<port>",
+                    "MYSQL_USER": "<user>",
+                    "MYSQL_PASS": "<pass>",
+                    "MYSQL_DB": "<db>",
+                    "MYSQL_SSL": "true"
+                }   
             }
     }
 }

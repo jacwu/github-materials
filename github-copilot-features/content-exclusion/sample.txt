@@ -1,8 +1,8 @@
 "*":
   # Ignore all `.env` files from all file system roots (Git and non-Git).
   - "**/.env"
-  # Ignore any files in or below the `excludes` directory.
-  - "**/excludes/**"
+  # Ignore any files in or below the `content-exclusion` directory.
+  - "**/content-exclusion/**"
   # Ignore any files in the `/script` directory.
   - "/script/*"
   # Ignore files directly within directories such as `packages` or `packaged`.

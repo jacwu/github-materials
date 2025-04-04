@@ -51,3 +51,4 @@ tmp/
 logs/
 
 *.log
+temp-*

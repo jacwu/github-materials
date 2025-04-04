@@ -1,1 +1,0 @@
-Update the HTML file to display modern furniture with description, image and price, including 2 sofas, 2 chairs, and 2 tables. Use the DALLE3 tool to create images and download them to the images folder
