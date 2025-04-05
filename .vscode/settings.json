@@ -34,5 +34,8 @@
         }
     ],
     "extensions.ignoreRecommendations": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "chat.tools.autoApprove": true,
+    "chat.edits2.enabled": true,
     "github.copilot.advanced": {}
 }

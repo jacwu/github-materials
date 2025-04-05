@@ -69,6 +69,10 @@
                 "type": "sse",
                 "url": "http://127.0.0.1:3000/sse"
             },
+            "mcp_server_office":{
+                "type": "sse",
+                "url": "http://127.0.0.1:25566/sse"
+            },
             "mcp_server_mysql": {
                 "command": "cmd",
                 "args": [

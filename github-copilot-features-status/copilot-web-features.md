@@ -2,16 +2,18 @@
 
 | GitHub Copilot Web Features       | Business | Enterprise |
 |-----------------------------------|----------|------------|
-| Copilot Workspace                 | ✅        | ✅          |
-| Chat                              | ✅        | ✅          |
-| Chat - HTMLPreview                | ✅        | ✅          |
+| Chat (Assistive and Immersive)    | ✅        | ✅          |
+| Personal Instructions in Chat     | ✅        | ✅          |
+| Chat - HTML Preview               | ✅        | ✅          |
 | Chat - Multiple Models            | ✅        | ✅          |
 | Chat - Vision                     | ✅        | ✅          |
-| PR Message Generation             | ✅        | ✅          |
-| PR Code Review                    | ✅        | ✅          |
-| Code guideline for code review    | ❌        | ✅          |
+| Code Snippet Chat                 | ✅        | ✅          |
+| PR Summary Generation             | ✅        | ✅          |
+| PR Copilot Code Review            | ✅        | ✅          |
+| Guideline for Code Review         | ❌        | ✅          |
+| Knowledge Bases                   | ❌        | ✅          |
+| Explain failed Action Job         | ✅        | ✅          |
+| Remote Index                      | ✅        | ✅          |
+| Copilot Workspace                 | ✅        | ✅          |
 | GitHub Models                     | ✅        | ✅          |
-| Explain failed action job         | ✅        | ✅          |
-| Personal Instructions             | ✅        | ✅          |
-| Instant semantic code search indexing  | ✅        | ✅     |
 

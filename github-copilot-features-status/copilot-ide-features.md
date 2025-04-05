@@ -20,11 +20,13 @@
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Agent Mode               | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
+| Agent Mode               | ✅             | ❌             | ❌             | ❌     | ❌       |
+| Multiple Agent Sessions  | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
-| Web Fetch                | ✅(Insiders)   | ❌             | ❌             | ❌     | ❌       |
-| MCP                      | ✅(Insiders）  | ❌             | ❌             | ❌     | ❌       |
+| MCP                      | ✅             | ❌             | ❌             | ❌     | ❌       |
+| Web Fetch Tool           | ✅             | ❌             | ❌             | ❌     | ❌       |
+| Thinking Tool            | ✅             | ❌             | ❌             | ❌     | ❌       |
 
 
 # GitHub Copilot Customization Features Comparison

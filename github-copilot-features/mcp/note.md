@@ -15,16 +15,7 @@ npx figma-developer-mcp --figma-api-key=figmatoken
 # time
 what's the current time
 
-# fetch
-fetch https://modelcontextprotocol.io/introduction and summarize
-
-# github
-what repositories do I have in github
-create an issue for github-materials repo. The title is "add more scenarios"
-
-# filesystem
-list_allowed_directories, list_directory
-
 # customized sse mcp server
 python mcp_server.py
 
+# try mcp in edit mode

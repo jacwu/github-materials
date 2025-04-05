@@ -32,12 +32,16 @@ The `github-copilot-features` folder contains example files and data to demonstr
 - `translation` - translate document using github copilot
 - `unit-test` - Examples of unit tests using github copilot
 - `vision` - Examples of vision usage in github copilot
+- `web-fetch` - Examples of fetching web content in github copilot
 
 ## github-copilot-scenario-roles
 
 The `github-copilot-scenario-roles` folder contains use cases in different scenarios:
+- `common-scenario` - use github copilot in common scenario
 - `infrastructure-as-code` - use github copilot to compose infrastructure script
 - `talk-to-database` - GitHub Copilot use cases in sql script generation with mcp
 - `ui-automation` - GitHub Copilot use cases in UI automation script generation
 - `ui-design-dalle` - GitHub Copilot use cases in image generation automatically using dalle 3
 - `ui-design-figma` - GitHub Copilot use cases in html generation with figma design
+- `office-operation` - GitHub Copilot use cases in office document generation with mcp
+- `github-operation` - GitHub Copilot use cases in GitHub operations with mcp

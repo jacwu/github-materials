@@ -14,17 +14,22 @@
 - `code-review` - Example files for code review demonstrations
 - `unit-test` - Examples of unit tests using github copilot
 - `context` - the supported context in github copilot
+- `common-scenario` - use github copilot in common scenario
 - `content-reference` - code reference for better code generation
 - `custom-instruction` - use custom instructions to customize the behavior in github copilot
 - `reusable-prompts` - Examples of reusable prompts in github copilot
 - `notebook` - Examples of data analysis using Jupyter notebooks
 - `vision` - Examples of vision usage in github copilot
 - `agent` - Example of using agent mode in github copilot
-- `mcp` - Examples of Model Context Protocol (MCP) server implementations and custom servers
+- `web-fetch` - Examples of fetching web content in github copilot
 - `nes` - next edit suggestion in github copilot
-- `extension` - Examples of class diagrams and flowcharts generation
+
+## MCP
+- `mcp` - Examples of Model Context Protocol (MCP) server implementations and custom servers
+- `github-operation` - GitHub Copilot use cases in GitHub operations with mcp
 - `talk-to-database` - GitHub Copilot use cases in sql script generation with mcp
 - `ui-automation` - GitHub Copilot use cases in UI automation script generation
 - `ui-design-dalle` - GitHub Copilot use cases in image generation automatically using dalle 3
 - `ui-design-figma` - GitHub Copilot use cases in html generation with figma design
+- `office-operation` - GitHub Copilot use cases in office document generation with mcp
 
