@@ -1,3 +1,17 @@
+# Models Supported in GitHub Copilot
+
+| Models                     |
+|----------------------------|
+| Claude 3.5 Sonnet          |
+| Claude 3.7 Sonnet          |
+| Claude 3.7 Sonnet Thinking |
+| Gemini 2.0 Flash           |
+| Gemini 2.5 Pro             |
+| GPT-4.5                    |
+| GPT-4O                     |
+| o1                         |
+| o3-mini                    |
+
 # GitHub Copilot Code Completion Features Comparison
 
 | Code Completion Features | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |

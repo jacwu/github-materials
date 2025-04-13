@@ -1,0 +1,1 @@
+in agent mode, all the command that will be executed should be in windows format instead of mac
