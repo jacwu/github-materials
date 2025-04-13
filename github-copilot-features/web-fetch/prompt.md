@@ -1,1 +1,2 @@
 #fetch https://modelcontextprotocol.io/introduction and summarize
+#fetch https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow , and write sample code to use oauth2 for entra id

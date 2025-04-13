@@ -1,0 +1,1 @@
+@github #web the difference betwen MCP and A2A

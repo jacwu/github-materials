@@ -7,7 +7,9 @@
 | Chat - HTML Preview               | ✅        | ✅          |
 | Chat - Multiple Models            | ✅        | ✅          |
 | Chat - Vision                     | ✅        | ✅          |
+| Chat - Paste GitHub Link          | ✅        | ✅          |
 | Code Snippet Chat                 | ✅        | ✅          |
+| Agent in Codespace                | ✅        | ✅          |
 | PR Summary Generation             | ✅        | ✅          |
 | PR Copilot Code Review            | ✅        | ✅          |
 | Guideline for Code Review         | ❌        | ✅          |
