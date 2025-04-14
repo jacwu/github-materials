@@ -1,1 +1,1 @@
-in agent mode, all the command that will be executed should be in windows format instead of mac
+I am using windows as my development environment. Make sure the command work for Windows OS.
