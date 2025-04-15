@@ -12,9 +12,10 @@
         }
     ],
     "chat.mcp.discovery.enabled": true,
-    "github.copilot.renameSuggestions.triggerAutomatically": false,
+    "github.copilot.renameSuggestions.triggerAutomatically": true,
     "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
     "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.search.semanticTextResults": true,
     "python.createEnvironment.trigger": "off",
     "chat.promptFiles": true,
     "github.copilot.chat.codeGeneration.instructions": [
