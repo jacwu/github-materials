@@ -8,15 +8,14 @@
 | Chat - Vision                     | ✅ | ✅ | ✅        | ✅          |
 | Chat - Paste GitHub Link          | ✅ | ✅ | ✅        | ✅          |
 | Chat - Code Snippet               | ✅ | ✅ | ✅        | ✅          |
+| Chat - Share                      | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |
-| Custom Instruction in Organization| ✅ | ❌ | ✅        | ✅          |
+| Organization Custom Instruction   | ✅ | ❌ | ❌        | ✅          |
 | Agent in Codespace                | ✅ | ✅ | ✅        | ✅          |
 | PR Summary Generation             | ✅ | ✅ | ✅        | ✅          |
 | PR Copilot Code Review            | ✅ | ✅ | ✅        | ✅          |
 | Guideline for Code Review         | ✅ | ❌ | ❌        | ✅          |
 | Knowledge Bases                   | ✅ | ❌ | ❌        | ✅          |
-| Explain failed Action Job         | ✅ | ✅ | ✅        | ✅          |
+| Explain Failed Action Job         | ✅ | ✅ | ✅        | ✅          |
 | Remote Index                      | ✅ | ✅ | ✅        | ✅          |
-| Copilot Workspace                 | ✅ | ✅ | ✅        | ✅          |
 | GitHub Models                     | ✅ | ✅ | ✅        | ✅          |
-

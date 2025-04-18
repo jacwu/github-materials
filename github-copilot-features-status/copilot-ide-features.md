@@ -8,9 +8,12 @@
 | Gemini 2.0 Flash           |
 | Gemini 2.5 Pro             |
 | GPT-4.5                    |
-| GPT-4O                     |
+| GPT-4o                     |
+| GPT-4.1                    |
 | o1                         |
+| o3                         |
 | o3-mini                    |
+| o4-mini                    |
 
 # GitHub Copilot Code Completion Features Comparison
 
@@ -25,7 +28,6 @@
 | Chat/Edit Features       | VS Code       | Visual Studio | JetBrains     | Xcode | Eclipse |
 |--------------------------|---------------|---------------|---------------|-------|---------|
 | Inline Chat              | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Multiple Models in Inline Chat | ✅       | ✅             | ✅             | ❌     | ❌       |
 | Chat Mode                | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ✅       |
