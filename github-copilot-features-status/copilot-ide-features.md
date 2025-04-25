@@ -32,27 +32,26 @@
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ✅       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
-| @workspace               | ✅             | ✅             | ✅@project     | ❌     | ❌       |
+| @workspace               | ✅             | ✅             | ✅@project     | ✅     | ❌       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Agent Mode               | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Multiple Agent Sessions  | ✅             | ❌             | ❌             | ❌     | ❌       |
-| Vision                   | ✅             | ✅             | ❌             | ❌     | ❌       |
+| Vision                   | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ❌             | ❌             | ❌     | ❌       |
-| Web Fetch Tool           | ✅             | ❌             | ❌             | ❌     | ❌       |
-| Thinking Tool            | ✅             | ❌             | ❌             | ❌     | ❌       |
+| Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |      |
 
 
 # GitHub Copilot Customization Features Comparison
 
 | Customization Features               | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------------------|---------|---------------|-----------|-------|---------|
-| General Custom Instruction           | ✅       | ✅             | ❌         | ❌     | ❌       |
+| General Custom Instruction           | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Generation Instruction   | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom Test Generation Instruction   | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Custom Commit Message Instruction    | ✅       | ✅             | ❌         | ❌     | ❌       |
+| Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
