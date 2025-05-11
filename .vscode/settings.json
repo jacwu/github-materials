@@ -1,14 +1,22 @@
 {
     "github.copilot.chat.testGeneration.instructions": [
         {
-            "file": ".github/copilot-test-generation-instructions.md"
+            "file": ".github/instructions/copilot-test-generation-instructions.md"
         }
     ],
     "git.autofetch": true,
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/Users/vscode/repos/instructions": true
+    },
+    "chat.promptFilesLocations": {
+        ".github/prompts": true,
+        "/Users/vscode/repos/prompts": true
+    },
     "github.copilot.chat.reviewSelection.instructions": [
     
         {
-            "file": ".github/copilot-code-review-instructions.md"
+            "file": ".github/instructions/copilot-code-review-instructions.md"
         }
     ],
     "chat.mcp.discovery.enabled": true,
@@ -20,18 +28,18 @@
     "chat.promptFiles": true,
     "github.copilot.chat.codeGeneration.instructions": [
         {
-            "file": ".github/copilot-code-generation-instructions.md"
+            "file": ".github/instructions/copilot-code-generation-instructions.md"
         }
     ],
     "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
         {
-            "file": ".github/copilot-pull-request-description-instructions.md"
+            "file": ".github/instructions/copilot-pull-request-description-instructions.md"
         }
     ],
     "github.copilot.chat.commitMessageGeneration.instructions": [
 
         {
-            "file": ".github/copilot-commit-message-instructions.md"
+            "file": ".github/instructions/copilot-commit-message-instructions.md"
         }
     ],
     "extensions.ignoreRecommendations": true,
