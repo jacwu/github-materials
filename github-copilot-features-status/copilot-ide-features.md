@@ -20,7 +20,7 @@
 | Code Completion Features | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------|---------|---------------|-----------|-------|---------|
 | Code Completion          | ✅       | ✅             | ✅         | ✅     | ✅       |
-| Next Edit Suggestion     | ✅       | ❌             | ❌         | ❌     | ❌       |
+| Next Edit Suggestion     | ✅       | ✅             | ❌         | ❌     | ❌       |
 | Content Exclusion        | ✅       | ✅             | ✅         | ✅     | ❌       |
 
 # GitHub Copilot Chat/Edit Features Comparison
@@ -36,11 +36,11 @@
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Agent Mode               | ✅             | ❌             | ❌             | ❌     | ❌       |
+| Agent Mode               | ✅             | ✅             | ✅             | ✅     | ❌       |
 | Multiple Agent Sessions  | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
-| MCP                      | ✅             | ❌             | ❌             | ❌     | ❌       |
+| MCP                      | ✅             | ✅             | ❌             | ❌     | ❌       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |      |
 
 
