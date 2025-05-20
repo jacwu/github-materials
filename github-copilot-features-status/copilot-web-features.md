@@ -9,11 +9,12 @@
 | Chat - Paste GitHub Link          | ✅ | ✅ | ✅        | ✅          |
 | Chat - Code Snippet               | ✅ | ✅ | ✅        | ✅          |
 | Chat - Share                      | ✅ | ✅ | ✅        | ✅          |
+| Code Agent                        | ✅ | ❌ | ❌        | ✅          |
+| Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |
 | Organization Custom Instruction   | ✅ | ❌ | ❌        | ✅          |
 | Agent in Codespace                | ✅ | ✅ | ✅        | ✅          |
 | PR Summary Generation             | ✅ | ✅ | ✅        | ✅          |
-| PR Copilot Code Review            | ✅ | ✅ | ✅        | ✅          |
 | Guideline for Code Review         | ✅ | ❌ | ❌        | ✅          |
 | Knowledge Bases                   | ✅ | ❌ | ❌        | ✅          |
 | Explain Failed Action Job         | ✅ | ✅ | ✅        | ✅          |

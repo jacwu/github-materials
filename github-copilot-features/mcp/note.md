@@ -15,7 +15,12 @@ npx figma-developer-mcp --figma-api-key=figmatoken
 # time
 what's the current time
 
+# github
+create an issue in my current repo, the titile is "add more lab scenarios".  please help me add details, such as different lab for github copilot
+
 # customized sse mcp server
 python mcp_server.py
+what's the wheather today?
+create a random user data
 
-# try mcp in edit mode
+# try mcp tool with #toolname

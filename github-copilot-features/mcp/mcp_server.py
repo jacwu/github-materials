@@ -96,19 +96,20 @@ class Weather:
 
 
 class UserGenerator:
-    """用于生成随机用户数据的类"""
+    """Class for generating random user data"""
     
     async def generate_user(self, gender=None, nationality=None) -> dict:
         """
-        生成随机用户数据
+        Generate random user data.
         
         Args:
             gender: gender for the user
-            
+            nationality: nationality for the user
+        
         Returns:
-            包含随机用户数据的字典
+            Dictionary containing random user data
         """
-        # 构建 API URL
+        # Build API URL
         url = "https://randomuser.me/api/"
         params = []
         
@@ -122,7 +123,7 @@ class UserGenerator:
             
         logger.info(f"Calling Random User API: {url}")
         
-        # 调用 API
+        # Call API
         async with httpx.AsyncClient() as client:
             try:
                 response = await client.get(url)
@@ -223,20 +224,20 @@ class MCP_Server:
 
 
 def create_app():
-    weather_server = MCP_Server()
+    myserver = MCP_Server()
     sse = SseServerTransport("/request")
 
     class HandleSSE:
-        def __init__(self, sse, weather_server):
+        def __init__(self, sse, myserver):
             self.sse = sse
-            self.weather_server = weather_server
+            self.myserver = myserver
 
         async def __call__(self, scope, receive, send):
             async with self.sse.connect_sse(scope, receive, send) as streams:
-                await self.weather_server.app.run(
+                await self.myserver.app.run(
                     streams[0],
                     streams[1],
-                    self.weather_server.app.create_initialization_options()
+                    self.myserver.app.create_initialization_options()
                 )
 
     class HandleMessages:
@@ -247,7 +248,7 @@ def create_app():
             await self.sse.handle_post_message(scope, receive, send)
 
     routes = [
-        Route("/sse", endpoint=HandleSSE(sse, weather_server), methods=["GET"]),
+        Route("/sse", endpoint=HandleSSE(sse, myserver), methods=["GET"]),
         Route("/request", endpoint=HandleMessages(sse), methods=["POST"])
     ]
 

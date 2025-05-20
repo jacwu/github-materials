@@ -43,5 +43,4 @@ The `github-copilot-scenario-roles` folder contains use cases in different scena
 - `ui-automation` - GitHub Copilot use cases in UI automation script generation
 - `ui-design-dalle` - GitHub Copilot use cases in image generation automatically using dalle 3
 - `ui-design-figma` - GitHub Copilot use cases in html generation with figma design
-- `office-operation` - GitHub Copilot use cases in office document generation with mcp
 - `github-operation` - GitHub Copilot use cases in GitHub operations with mcp

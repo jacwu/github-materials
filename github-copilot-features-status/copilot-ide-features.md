@@ -36,11 +36,11 @@
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Agent Mode               | ✅             | ✅             | ✅             | ✅     | ❌       |
+| Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Multiple Agent Sessions  | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
-| MCP                      | ✅             | ✅             | ❌             | ❌     | ❌       |
+| MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |      |
 
 
@@ -65,6 +65,8 @@
 | Generate PR Description  | ✅       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Debug         | ❌       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Compile       | ❌       | ✅             | ❌         | ❌     | ❌       |
+| Java Upgrade Agent       | ✅       | ❌             | ❌         | ❌     | ❌       |
+| .Net Upgrade Agent       | ❌       | ✅             | ❌         | ❌     | ❌       |
 
 # GitHub Copilot Code Review Features Comparison
 
