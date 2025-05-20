@@ -34,8 +34,8 @@ public class BogoSort {
 
     public static void main(String[] args) {
         int[] arr = {5, 3, 2, 4, 1};
-        System.out.println("排序前：" + Arrays.toString(arr));
+        System.out.println("Before sorting: " + Arrays.toString(arr));
         bogoSort(arr);
-        System.out.println("排序后：" + Arrays.toString(arr));
+        System.out.println("After sorting: " + Arrays.toString(arr));
     }
 }
