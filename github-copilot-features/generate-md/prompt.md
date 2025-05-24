@@ -1,1 +1,1 @@
-基于 #file 生成文档，以md格式显示
+Generate documentation from #file, display in md format
