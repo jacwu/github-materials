@@ -1,4 +1,4 @@
-# Azure Blob File Manager Documentation
+# Azure Blob File Manager
 
 This document describes the `AzureBlobFileManager` class and its functionality in the `azure_file_manager.py` file.
 
