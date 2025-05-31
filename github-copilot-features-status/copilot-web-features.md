@@ -9,7 +9,8 @@
 | Chat - Paste GitHub Link          | ✅ | ✅ | ✅        | ✅          |
 | Chat - Code Snippet               | ✅ | ✅ | ✅        | ✅          |
 | Chat - Share                      | ✅ | ✅ | ✅        | ✅          |
-| Code Agent                        | ✅ | ❌ | ❌        | ✅          |
+| Code Space                        | ✅ | ✅ | ✅        | ✅          |
+| Coding Agent                      | ✅ | ❌ | ❌        | ✅          |
 | Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |
 | Organization Custom Instruction   | ✅ | ❌ | ❌        | ✅          |
