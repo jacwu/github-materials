@@ -47,5 +47,6 @@
     "chat.tools.autoApprove": true,
     "chat.edits2.enabled": true,
     "chat.agent.enabled": true,
+    "chat.agent.maxRequests": 100,
     "github.copilot.advanced": {}
 }
