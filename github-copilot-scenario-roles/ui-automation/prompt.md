@@ -1,0 +1,1 @@
+Use Playwright MCP server to explore localhost:3001 and generate test scripts. Please refer to the user story.

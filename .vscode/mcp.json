@@ -9,14 +9,6 @@
                 ],
                 "env": {}
             },
-            "mcp-server-fetch": {
-                "command": "python",
-                "args": [
-                    "-m",
-                    "mcp_server_fetch"
-                ],
-                "env": {}
-            },
             // for macOS, use npx shown below instead of cmd
             // "githuboMac": {
             //     "command": "npx",
