@@ -2,9 +2,11 @@
 
 | Models                     |
 |----------------------------|
-| Claude 3.5 Sonnet          |
-| Claude 3.7 Sonnet          |
-| Claude 3.7 Sonnet Thinking |
+| Claude Sonnet 3.5          |
+| Claude Sonnet 3.7          |
+| Claude Sonnet 3.7 Thinking |
+| Claude Sonnet 4            |
+| Claude Opus 4              |
 | Gemini 2.0 Flash           |
 | Gemini 2.5 Pro             |
 | GPT-4.5                    |
@@ -54,6 +56,7 @@
 | Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
+| Custom Chat Modes                    | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
 
 # GitHub Copilot Misc Features Comparison

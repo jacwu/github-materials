@@ -48,5 +48,7 @@
     "chat.edits2.enabled": true,
     "chat.agent.enabled": true,
     "chat.agent.maxRequests": 100,
+    "github.copilot.nextEditSuggestions.fixes": true,
+    "github.copilot.chat.notebook.followCellExecution.enabled": true,
     "github.copilot.advanced": {}
 }
