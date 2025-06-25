@@ -10,14 +10,13 @@
 | Chat - Code Snippet               | ✅ | ✅ | ✅        | ✅          |
 | Chat - Share                      | ✅ | ✅ | ✅        | ✅          |
 | Code Space                        | ✅ | ✅ | ✅        | ✅          |
-| Coding Agent                      | ✅ | ❌ | ❌        | ✅          |
+| Coding Agent                      | ✅ | ✅ | ✅        | ✅          |
 | Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |
 | Organization Custom Instruction   | ✅ | ❌ | ❌        | ✅          |
 | Agent in Codespace                | ✅ | ✅ | ✅        | ✅          |
 | PR Summary Generation             | ✅ | ✅ | ✅        | ✅          |
 | Guideline for Code Review         | ✅ | ❌ | ❌        | ✅          |
-| Knowledge Bases                   | ✅ | ❌ | ❌        | ✅          |
 | Explain Failed Action Job         | ✅ | ✅ | ✅        | ✅          |
 | Remote Index                      | ✅ | ✅ | ✅        | ✅          |
 | GitHub Models                     | ✅ | ✅ | ✅        | ✅          |

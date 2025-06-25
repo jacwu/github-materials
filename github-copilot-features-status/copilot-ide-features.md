@@ -31,14 +31,14 @@
 |--------------------------|---------------|---------------|---------------|-------|---------|
 | Inline Chat              | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Chat Mode                | ✅             | ✅             | ✅             | ✅     | ✅       |
+| Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
+| Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ✅       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
 | @workspace               | ✅             | ✅             | ✅@project     | ✅     | ❌       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Multiple Agent Sessions  | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
