@@ -1,21 +1,21 @@
 # Models Supported in GitHub Copilot
 
-| Models                     |
-|----------------------------|
-| Claude Sonnet 3.5          |
-| Claude Sonnet 3.7          |
-| Claude Sonnet 3.7 Thinking |
-| Claude Sonnet 4            |
-| Claude Opus 4              |
-| Gemini 2.0 Flash           |
-| Gemini 2.5 Pro             |
-| GPT-4.5                    |
-| GPT-4o                     |
-| GPT-4.1                    |
-| o1                         |
-| o3                         |
-| o3-mini                    |
-| o4-mini                    |
+| Models                     | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
+|----------------------------|---------|---------------|-----------|-------|---------|
+| Claude Sonnet 3.5          | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Claude Sonnet 3.7          | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Claude Sonnet 3.7 Thinking | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Claude Sonnet 4            | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Claude Opus 4              | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Gemini 2.0 Flash           | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      |
+| GPT-4.5                    | ✅      | ✅            | ✅        | ✅    | ✅      |
+| GPT-4o                     | ✅      | ✅            | ✅        | ✅    | ✅      |
+| GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      |
+| o1                         | ✅      | ✅            | ✅        | ✅    | ✅      |
+| o3                         | ✅      | ✅            | ✅        | ✅    | ✅      |
+| o3-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      |
+| o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      |
 
 # GitHub Copilot Code Completion Features Comparison
 
