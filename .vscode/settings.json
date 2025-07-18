@@ -1,9 +1,4 @@
 {
-    "github.copilot.chat.testGeneration.instructions": [
-        {
-            "file": ".github/instructions/copilot-test-generation-instructions.md"
-        }
-    ],
     "git.autofetch": true,
     "chat.instructionsFilesLocations": {
         ".github/instructions": true,
@@ -26,11 +21,6 @@
     "github.copilot.chat.search.semanticTextResults": true,
     "python.createEnvironment.trigger": "off",
     "chat.promptFiles": true,
-    "github.copilot.chat.codeGeneration.instructions": [
-        {
-            "file": ".github/instructions/copilot-code-generation-instructions.md"
-        }
-    ],
     "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
         {
             "file": ".github/instructions/copilot-pull-request-description-instructions.md"
@@ -50,5 +40,6 @@
     "chat.agent.maxRequests": 100,
     "github.copilot.nextEditSuggestions.fixes": true,
     "github.copilot.chat.notebook.followCellExecution.enabled": true,
-    "github.copilot.advanced": {}
+    "github.copilot.advanced": {},
+    "chat.editRequests": "hover"
 }

@@ -51,8 +51,6 @@
 | Customization Features               | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------------------|---------|---------------|-----------|-------|---------|
 | General Custom Instruction           | ✅       | ✅             | ✅         | ❌     | ❌       |
-| Custom Code Generation Instruction   | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Custom Test Generation Instruction   | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |

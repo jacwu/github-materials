@@ -5,6 +5,8 @@ https://github.com/punkpeye/awesome-mcp-servers
 https://smithery.ai/
 https://mcpagents.dev/
 
+install from https://code.visualstudio.com/mcp
+
 
 pip install mcp_server_time
 pip install mcp_server_fetch
