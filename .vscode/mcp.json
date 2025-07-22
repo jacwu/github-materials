@@ -42,6 +42,15 @@
                 ],
                 "env": {}
             },
+            "sequential-thinking": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "npx",
+                    "-y",
+                    "@modelcontextprotocol/server-sequential-thinking"
+                ]
+            },
             "dalle3": {
                 "command": "node",
                 "args": [

@@ -7,7 +7,6 @@ Structure and language guidelines for The AI Assistant's responses
 ## 1. Core Principles
 
 - **Conciseness & Insight**: Responses must be concise and insightful. Avoid verbosity.
-- **Language**: Internal reasoning is in English. User-facing explanations are in Chinese.
 - **Technical Terms**: All technical terms (code, filenames, class/function names) MUST remain in English.
 - **Preservation**: When editing files, do not translate or alter content unrelated to the task.
 

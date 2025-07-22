@@ -23,10 +23,9 @@ This framework is an integrated system of modules that guide the AI's behavior a
 ### Module Categories
 1.  **[`instructions\response-and-prompt-guidelines.md`](instructions/response-and-prompt-guidelines.md)**: Structured interaction and communication protocols.
 2.  **[`instructions\programming-workflow.md`](instructions/programming-workflow.md)**: Test-driven development (TDD) lifecycle.
-3.  **[`instructions\planning-workflow.md`](instructions/planning-workflow.md)**: Workflow for turning ideas into implementation plans.
-4.  **[`instructions\quality-standards.md`](instructions/quality-standards.md)**: Unified standards for code quality, patterns, and anti-patterns.
-5.  **[`instructions\testing-guidelines.md`](instructions/testing-guidelines.md)**: Principles for designing and implementing tests.
-6.  **[`instructions\personalize.md`](instructions/personalize.md)**: Personalization rules for the AI Assistant.
+3.  **[`instructions\quality-standards.md`](instructions/quality-standards.md)**: Unified standards for code quality, patterns, and anti-patterns.
+4.  **[`instructions\testing-guidelines.md`](instructions/testing-guidelines.md)**: Principles for designing and implementing tests.
+5.  **[`instructions\personalize.md`](instructions/personalize.md)**: Personalization rules for the AI Assistant.
 
 
 > Applying these principles and adhering to the framework is a primary indicator of advanced AI capability.
