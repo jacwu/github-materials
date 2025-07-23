@@ -25,12 +25,12 @@
 
 | Chat/Edit Features       | VS Code       | Visual Studio | JetBrains     | Xcode | Eclipse |
 |--------------------------|---------------|---------------|---------------|-------|---------|
-| Inline Chat              | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Chat Mode                | ✅             | ✅             | ✅             | ✅     | ✅       |
+| Inline Chat Mode         | ✅             | ✅             | ✅             | ❌     | ❌       |
+| Ask Mode                 | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       |
+| Custom Mode              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       |
-| Multiple Models in Chat  | ✅             | ✅             | ✅             | ❌     | ✅       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
 | @workspace               | ✅             | ✅             | ✅@project     | ✅     | ❌       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
@@ -50,7 +50,6 @@
 | Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Custom Chat Modes                    | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
 
 # GitHub Copilot Misc Features Comparison
