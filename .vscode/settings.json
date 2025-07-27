@@ -1,5 +1,7 @@
 {
     "git.autofetch": true,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": false,
+    "github.copilot.chat.codesearch.enabled": true,
     "chat.instructionsFilesLocations": {
         ".github/instructions": true,
         "/Users/vscode/repos/instructions": true

@@ -32,14 +32,14 @@
 | Custom Mode              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
-| @workspace               | ✅             | ✅             | ✅@project     | ✅     | ❌       |
+| @workspace               | ✅             | ✅             | ✅@project     | ✅     | ✅       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Multiple Agent Sessions  | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
-| Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |      |
+| Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
+| BYOK                     | ✅             | ❌             | ❌             | ❌     | ❌       |
 
 
 # GitHub Copilot Customization Features Comparison
@@ -57,7 +57,7 @@
 | Misc Features in IDE     | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------|---------|---------------|-----------|-------|---------|
 | Code Referencing         | ✅       | ✅             | ✅         | ❌     | ❌       |
-| Generate Commit Message  | ✅       | ✅             | ✅         | ❌     | ❌       |
+| Generate Commit Message  | ✅       | ✅             | ✅         | ❌     | ✅       |
 | Generate PR Description  | ✅       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Debug         | ❌       | ✅             | ❌         | ❌     | ❌       |
 | Copilot in Compile       | ❌       | ✅             | ❌         | ❌     | ❌       |

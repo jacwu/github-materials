@@ -6,6 +6,8 @@ https://smithery.ai/
 https://mcpagents.dev/
 
 install from https://code.visualstudio.com/mcp
+configure mcp for vs https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022
+configure mcp for jetbrians https://docs.github.com/en/copilot/how-tos/context/model-context-protocol/extending-copilot-chat-with-mcp?tool=jetbrains
 
 
 pip install mcp_server_time
