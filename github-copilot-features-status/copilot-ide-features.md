@@ -12,6 +12,7 @@
 | GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      |
 | o3                         | ✅      | ✅            | ✅        | ✅    | ✅      |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      |
+| GPT-5                      | ✅      | ❌            | ❌        | ❌    | ❌      |
 
 # GitHub Copilot Code Completion Features Comparison
 
