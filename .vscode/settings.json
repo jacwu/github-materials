@@ -16,7 +16,12 @@
             "file": ".github/instructions/copilot-code-review-instructions.md"
         }
     ],
-    "chat.mcp.discovery.enabled": true,
+    "chat.mcp.discovery.enabled": {
+        "claude-desktop": true,
+        "windsurf": true,
+        "cursor-global": true,
+        "cursor-workspace": true
+    },
     "github.copilot.renameSuggestions.triggerAutomatically": true,
     "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
     "github.copilot.nextEditSuggestions.enabled": true,
@@ -40,8 +45,11 @@
     "chat.edits2.enabled": true,
     "chat.agent.enabled": true,
     "chat.agent.maxRequests": 100,
+    "chat.todoListTool.enabled": true,
     "github.copilot.nextEditSuggestions.fixes": true,
     "github.copilot.chat.notebook.followCellExecution.enabled": true,
     "github.copilot.advanced": {},
-    "chat.editRequests": "hover"
+    "chat.editRequests": "hover",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000
 }
