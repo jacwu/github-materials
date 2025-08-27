@@ -13,6 +13,7 @@
 | o3                         | ✅      | ✅            | ✅        | ✅    | ✅      |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Grok Code Fast 1           | ✅      | ❌            | ❌        | ❌    | ❌      |
 
 # GitHub Copilot Code Completion Features Comparison
 
