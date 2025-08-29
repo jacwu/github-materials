@@ -13,6 +13,7 @@
 | o3                         | ✅      | ✅            | ✅        | ✅    | ✅      |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      |
+| GPT-5 mini                 | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Grok Code Fast 1           | ✅      | ❌            | ❌        | ❌    | ❌      |
 
 # GitHub Copilot Code Completion Features Comparison
@@ -41,7 +42,7 @@
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
-| BYOK                     | ✅             | ❌             | ❌             | ❌     | ❌       |
+| BYOK                     | ✅             | ✅             | ❌             | ❌     | ❌       |
 
 
 # GitHub Copilot Customization Features Comparison
@@ -72,5 +73,5 @@
 |--------------------------|---------|---------------|-----------|-------|---------|
 | Ask Review in Chat       | ✅       | ✅             | ✅         | ✅     | ✅       |
 | Review Selection         | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Review Commit Change     | ✅       | ✅             | ❌         | ❌     | ❌       |
+| Review Commit Change     | ✅       | ✅             | ❌         | ✅     | ❌       |
 | PR Review                | ✅       | ✅             | ❌         | ❌     | ❌       |
