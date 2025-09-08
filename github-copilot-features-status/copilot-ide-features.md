@@ -44,6 +44,8 @@
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
 | BYOK                     | ✅             | ✅             | ❌             | ❌     | ❌       |
 
+> [!NOTE]
+> You can use [Fetch MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) in Jetbrains/Visual Studio/Xcode to fetch webpage.
 
 # GitHub Copilot Customization Features Comparison
 
