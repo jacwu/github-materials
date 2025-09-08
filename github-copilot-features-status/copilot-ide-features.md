@@ -21,7 +21,7 @@
 | Code Completion Features | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------|---------|---------------|-----------|-------|---------|
 | Code Completion          | ✅       | ✅             | ✅         | ✅     | ✅       |
-| Next Edit Suggestion     | ✅       | ✅             | ❌         | ❌     | ❌       |
+| Next Edit Suggestion     | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Content Exclusion        | ✅       | ✅             | ✅         | ✅     | ❌       |
 
 # GitHub Copilot Chat/Edit Features Comparison
@@ -38,7 +38,7 @@
 | @workspace               | ✅             | ✅             | ✅@project     | ✅     | ✅       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Vision                   | ✅             | ✅             | ✅             | ❌     | ❌       |
+| Vision                   | ✅             | ✅             | ✅             | ❌     | ✅       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
@@ -51,7 +51,7 @@
 
 | Customization Features               | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |--------------------------------------|---------|---------------|-----------|-------|---------|
-| General Custom Instruction           | ✅       | ✅             | ✅         | ❌     | ❌       |
+| General Custom Instruction           | ✅       | ✅             | ✅         | ✅     | ✅       |
 | Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
