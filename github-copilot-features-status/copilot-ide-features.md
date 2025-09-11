@@ -38,11 +38,11 @@
 | @workspace               | ✅             | ✅             | ✅@project     | ✅     | ✅       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Vision                   | ✅             | ✅             | ✅             | ❌     | ✅       |
+| Vision                   | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
-| BYOK                     | ✅             | ✅             | ❌             | ❌     | ❌       |
+| BYOK                     | ✅             | ✅             | ❌             | ✅     | ❌       |
 
 > [!NOTE]
 > You can use [Fetch MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) in Jetbrains/Visual Studio/Xcode to fetch webpage.
@@ -55,7 +55,7 @@
 | Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
+| Reusable Prompt                      | ✅       | ❌             | ❌         | ✅     | ❌       |
 
 # GitHub Copilot Misc Features Comparison
 
