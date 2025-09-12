@@ -15,6 +15,7 @@
 | GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-5 mini                 | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Grok Code Fast 1           | ✅      | ❌            | ❌        | ❌    | ❌      |
+| Auto                       | ✅      | ❌            | ❌        | ❌    | ❌      |
 
 # GitHub Copilot Code Completion Features Comparison
 
@@ -56,6 +57,7 @@
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
+| AGENTS.md                            | ✅       | ❌             | ❌         | ❌     | ❌       |
 
 # GitHub Copilot Misc Features Comparison
 
