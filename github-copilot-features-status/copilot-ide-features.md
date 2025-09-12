@@ -39,11 +39,11 @@
 | @workspace               | ✅             | ✅             | ✅@project     | ✅     | ✅       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
-| Vision                   | ✅             | ✅             | ✅             | ❌     | ✅       |
+| Vision                   | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
-| BYOK                     | ✅             | ✅             | ❌             | ❌     | ❌       |
+| BYOK                     | ✅             | ✅             | ❌             | ✅     | ❌       |
 
 > [!NOTE]
 > You can use [Fetch MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) in Jetbrains/Visual Studio/Xcode to fetch webpage.
