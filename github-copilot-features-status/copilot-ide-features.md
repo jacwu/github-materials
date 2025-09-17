@@ -6,7 +6,7 @@
 | Claude Sonnet 3.7          | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Claude Sonnet 3.7 Thinking | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Claude Sonnet 4            | ✅      | ✅            | ✅        | ✅    | ✅      |
-| Claude Opus 4              | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Claude Opus 4.1            | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Gemini 2.0 Flash           | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      |

@@ -135,7 +135,6 @@
     "github.copilot.renameSuggestions.triggerAutomatically": true,
     "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
     "github.copilot.nextEditSuggestions.enabled": true,
-    "github.copilot.chat.search.semanticTextResults": true,
     "python.createEnvironment.trigger": "off",
     "chat.promptFiles": true,
     "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
@@ -151,7 +150,6 @@
     ],
     "extensions.ignoreRecommendations": true,
     "github.copilot.chat.agent.thinkingTool": true,
-    "chat.tools.autoApprove": true,
     "chat.edits2.enabled": true,
     "chat.agent.enabled": true,
     "chat.agent.maxRequests": 100,
