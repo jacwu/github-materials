@@ -42,6 +42,7 @@
 | Vision                   | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
+| MCP Server Registry      | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
 | BYOK                     | ✅             | ✅             | ✅             | ✅     | ❌       |
 
@@ -77,5 +78,5 @@
 |--------------------------|---------|---------------|-----------|-------|---------|
 | Ask Review in Chat       | ✅       | ✅             | ✅         | ✅     | ✅       |
 | Review Selection         | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Review Commit Change     | ✅       | ✅             | ❌         | ✅     | ❌       |
+| Review Commit Change     | ✅       | ✅             | ✅         | ✅     | ❌       |
 | PR Review                | ✅       | ✅             | ❌         | ❌     | ❌       |

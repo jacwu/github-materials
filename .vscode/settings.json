@@ -159,5 +159,7 @@
     "github.copilot.advanced": {},
     "chat.editRequests": "hover",
     "files.autoSave": "afterDelay",
+    // autoApprove is only support in user profile settings, not workspace settings
+    "chat.tools.global.autoApprove": true,
     "files.autoSaveDelay": 5000
 }
