@@ -57,7 +57,7 @@
 | Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       |
-| Reusable Prompt                      | ✅       | ❌             | ❌         | ❌     | ❌       |
+| Reusable Prompt                      | ✅       | ❌             | ✅         | ❌     | ❌       |
 | AGENTS.md                            | ✅       | ❌             | ❌         | ❌     | ❌       |
 
 # GitHub Copilot Misc Features Comparison
