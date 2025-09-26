@@ -1,4 +1,4 @@
-name: PR Codex Review
+name: PR Copilot Review
 
 on:
   pull_request:
@@ -10,8 +10,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  codex_pr_review:
-    name: Codex PR Review
+  copilot_pr_review:
+    name: Copilot PR Review
     runs-on: ubuntu-latest
     env:
       REVIEW_TABLE_FALLBACK: |
@@ -26,6 +26,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: Compute diff and changed files
         id: diff
@@ -48,32 +53,17 @@ jobs:
           printf '%s' "$REVIEW_TABLE_FALLBACK" > raw_review.md
           cp raw_review.md review_result.md
 
-      - name: Install Codex CLI
+      - name: Install Copilot CLI
+        env:
+            GITHUB_TOKEN: ${{ secrets.COPILOT_CLI_PAT }}
         if: steps.diff.outputs.no_changes == 'false'
         run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends curl ca-certificates git
-          npm install -g @openai/codex@latest
-          mkdir -p ~/.codex
-          cat <<EOF > ~/.codex/config.toml
-          # Set the default model and provider
-          model = "${AZURE_OPENAI_MODEL}"
-          model_provider = "azure"
-          preferred_auth_method = "apikey"
+          npm install -g @github/copilot
+          copilot --version
 
-          # Configure the Azure provider
-          [model_providers.azure]
-          name = "Azure"
-
-          # Make sure you set the appropriate subdomain for this URL.
-          base_url = "${AZURE_OPENAI_BASE_URL}/openai/v1"
-          env_key = "AZURE_OPENAI_API_KEY"
-          wire_api = "responses"
-          model_reasoning_effort = "high"
-          EOF
-          codex --version
-
-      - name: Run Codex code review
+      - name: Run Copilot code review
+        env:
+            GITHUB_TOKEN: ${{ secrets.COPILOT_CLI_PAT }}
         if: steps.diff.outputs.no_changes == 'false'
         run: |
           if [ -z "$AZURE_OPENAI_API_KEY" ]; then
@@ -87,15 +77,15 @@ jobs:
           CHANGED_FILES_SECTION="Changed files:\n$(cat changed_files.txt)"
           DIFF_SECTION="Unified diff:\n$(cat diff.patch)"
 
-          export CODEX_PROMPT="$HEADER\n\n$RULES\n\n$CHANGED_FILES_SECTION\n\n$DIFF_SECTION"
+          export COPILOT_PROMPT="$HEADER\n\n$RULES\n\n$CHANGED_FILES_SECTION\n\n$DIFF_SECTION"
 
-          printf '%s\n' "$CODEX_PROMPT"
+          printf '%s\n' "$COPILOT_PROMPT"
 
-          codex exec --full-auto "$CODEX_PROMPT" | tee codex_raw.txt >/dev/null
+          copilot -p "$COPILOT_PROMPT" | tee copilot_raw.txt >/dev/null
 
-          printf '\n\nRaw Codex Output:\n%s\n' "$(cat codex_raw.txt)"
+          printf '\n\nRaw Copilot Output:\n%s\n' "$(cat copilot_raw.txt)"
 
-          sed -E 's/\x1B\[[0-9;]*[A-Za-z]//g' codex_raw.txt | tr -d '\r' > raw_review.md
+          sed -E 's/\x1B\[[0-9;]*[A-Za-z]//g' copilot_raw.txt | tr -d '\r' > raw_review.md
 
           if ! grep -q '|' raw_review.md; then
             printf '%s\n' "$REVIEW_TABLE_FALLBACK" > raw_review.md
@@ -121,17 +111,17 @@ jobs:
           fi
 
           # Append attribution footer to the comment body
-          printf '\n\nReviewed by Codex\n' >> "$BODY_FILE"
+          printf '\n\nReviewed by GitHub Copilot CLI\n' >> "$BODY_FILE"
 
           gh pr comment ${{ github.event.pull_request.number }} --body-file "$BODY_FILE"
 
-      - name: Upload Codex raw output
+      - name: Upload Copilot raw output
         if: steps.diff.outputs.no_changes == 'false'
         uses: actions/upload-artifact@v4
         with:
-          name: codex-review-logs
+          name: copilot-review-logs
           path: |
-            codex_raw.txt
+            copilot_raw.txt
             raw_review.md
             review_result.md
             diff.patch
