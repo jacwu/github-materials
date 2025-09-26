@@ -39,9 +39,9 @@ def require_env(name: str) -> str:
 
 
 def main() -> None:
-    source_path = Path("codex_review.md")
+    source_path = Path("raw_review.md")
     if not source_path.exists():
-        print("codex_review.md not found; cannot repair review output.", file=sys.stderr)
+        print("raw_review.md not found; cannot repair review output.", file=sys.stderr)
         raise SystemExit(1)
 
     source_text = source_path.read_text(encoding="utf-8")
