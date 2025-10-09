@@ -20,3 +20,4 @@
 | Explain Failed Action Job         | ✅ | ✅ | ✅        | ✅          |
 | Remote Index                      | ✅ | ✅ | ✅        | ✅          |
 | GitHub Models                     | ✅ | ✅ | ✅        | ✅          |
+| GitHub Spark                      | ✅ | ❌ | ❌        | ✅          |

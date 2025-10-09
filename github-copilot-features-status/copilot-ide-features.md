@@ -2,20 +2,16 @@
 
 | Models                     | VS Code | Visual Studio | JetBrains | Xcode | Eclipse |
 |----------------------------|---------|---------------|-----------|-------|---------|
-| Claude Sonnet 3.5          | ✅      | ✅            | ✅        | ✅    | ✅      |
-| Claude Sonnet 3.7          | ✅      | ✅            | ✅        | ✅    | ✅      |
-| Claude Sonnet 3.7 Thinking | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Claude Sonnet 4            | ✅      | ✅            | ✅        | ✅    | ✅      |
+| Claude Sonnet 4.5          | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Claude Opus 4.1            | ✅      | ✅            | ✅        | ✅    | ✅      |
-| Gemini 2.0 Flash           | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      |
-| o3                         | ✅      | ✅            | ✅        | ✅    | ✅      |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-5 mini                 | ✅      | ✅            | ✅        | ✅    | ✅      |
 | GPT-5-Codex                | ✅      | ❌            | ❌        | ❌    | ❌      |
-| Grok Code Fast 1           | ✅      | ❌            | ❌        | ❌    | ❌      |
+| Grok Code Fast 1           | ✅      | ✅            | ✅        | ✅    | ✅      |
 | Auto                       | ✅      | ❌            | ❌        | ❌    | ❌      |
 
 # GitHub Copilot Code Completion Features Comparison
