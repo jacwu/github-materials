@@ -21,16 +21,8 @@
             //     }
             // },
             "github": {
-                "command": "cmd",
-                "args": [
-                    "/c",
-                    "npx",
-                    "-y",
-                    "@modelcontextprotocol/server-github"
-                ],
-                "env": {
-                    "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
-                }
+                "type": "http",
+                "url": "https://api.githubcopilot.com/mcp/"
             },
             "playwright": {
                 "command": "cmd",
@@ -61,17 +53,6 @@
                     "AZURE_OPENAI_API_KEY": "<api_key>",
                     "AZURE_OPENAI_DEPLOYMENT_NAME": "<deployment_name>"
                 }
-            },
-            "figma": {
-                "command": "cmd",
-                "args": [
-                    "/c",
-                    "npx",
-                    "-y",
-                    "figma-developer-mcp",
-                    "--figma-api-key={FIGMA-KEY}",
-                    "--stdio"
-                ]
             },
             "my_mcp": {
                 "type": "sse",
