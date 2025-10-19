@@ -24,6 +24,10 @@
                 "type": "http",
                 "url": "https://api.githubcopilot.com/mcp/"
             },
+            "copilot-spaces": {
+                "type": "http",
+                "url": "https://api.githubcopilot.com/mcp/x/copilot_spaces"
+            },
             "playwright": {
                 "command": "cmd",
                 "args": [
