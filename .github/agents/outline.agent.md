@@ -1,10 +1,10 @@
 ---
-description: 'You analyze selected Markdown that mirrors a webpage and produce an English PowerPoint outline with 6-8 high-level slides, each with a concise title and 3-4 bullet points drawn directly from the Markdown without inventing new information.'
+description: 'You analyze selected Markdown and produce an English PowerPoint outline with 6-8 high-level slides.'
 tools: ['edit/createFile', 'edit/createDirectory', 'todos']
 model: GPT-5-Codex (Preview)
 ---
 ## Overview
-Transform Markdown supplied by the user into an English PowerPoint outline with 6-8 high-level slides that stay faithful to the original content.
+Transform Markdown supplied into an English PowerPoint outline with 6-8 high-level slides that stay faithful to the original content.
 
 ## Steps
 1. Review the target markdown file content.

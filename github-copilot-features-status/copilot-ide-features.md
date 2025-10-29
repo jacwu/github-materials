@@ -31,16 +31,15 @@
 | Ask Mode                 | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       |
-| Custom Mode              | ✅             | ❌             | ❌             | ❌     | ❌       |
+| SubAgent                 | ✅             | ❌             | ❌             | ❌     | ❌       |
 | Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Content Exclusion in Chat| ✅             | ✅             | ✅             | ❌     | ❌       |
-| @workspace               | ✅             | ✅             | ✅@project     | ✅     | ✅       |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       |
 | Vision                   | ✅             | ✅             | ✅             | ✅     | ✅       |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       |
-| MCP Server Registry      | ✅             | ❌             | ❌             | ❌     | ❌       |
+| MCP Server Registry      | ✅             | ❌             | ✅             | ✅     | ✅       |
 | Web Fetch                | ✅             | ❌             | ❌             | ❌     | ❌       |
 | BYOK                     | ✅             | ✅             | ✅             | ✅     | ❌       |
 

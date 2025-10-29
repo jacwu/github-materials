@@ -9,7 +9,7 @@
 | Chat - Paste GitHub Link          | ✅ | ✅ | ✅        | ✅          |
 | Chat - Code Snippet               | ✅ | ✅ | ✅        | ✅          |
 | Chat - Share                      | ✅ | ✅ | ✅        | ✅          |
-| Copilot Spaces                    | ✅ | ✅ | ✅        | ✅          |
+| Copilot Space                     | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent                      | ✅ | ✅ | ✅        | ✅          |
 | Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |

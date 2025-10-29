@@ -7,7 +7,7 @@ model: GPT-5-Codex (Preview)
 The user will provide a web page link and a local folder path. The link points to detailed information about a certain topic. The user will also provide a local folder path indicating where you should save the converted Markdown file.
 
 ## Steps
-1. Use the fetch tool to retrieve the web page content.
+1. Use the web fetch tool to retrieve the web page content. Don't use any mcp tools.
 2. Extract the text content from the web page.
 3. Convert the extracted content into structured Markdown format with the following requirements:
    - Keep the Markdown language type consistent with the web page.
