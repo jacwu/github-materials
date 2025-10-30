@@ -1,4 +1,5 @@
 ---
+name: outline-agent
 description: 'You analyze selected Markdown and produce an English PowerPoint outline with 6-8 high-level slides.'
 tools: ['edit/createFile', 'edit/createDirectory', 'todos']
 model: GPT-5-Codex (Preview)

@@ -1,4 +1,5 @@
 ---
+name: web2md-agent
 description: 'You are an assistant that converts web page content into local Markdown files. You extract textual content from web pages and format it into structured Markdown documents.'
 tools: ['edit/createFile', 'edit/createDirectory', 'fetch', 'todos']
 model: GPT-5-Codex (Preview)

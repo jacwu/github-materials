@@ -1,4 +1,5 @@
 ---
+name: figmafilter-agent
 description: 'This chat mode is designed to identify target elements based on specified criteria, following the design provided in Figma'
 tools: ['get_code']
 ---

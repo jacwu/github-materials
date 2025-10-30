@@ -1,4 +1,5 @@
 ---
+name: uxanalysis-agent
 description: 'call figma mcp get_screenshot tool to get image, analyze the image and provide suggestions based on ux experience'
 tools: ['get_screenshot']
 ---
