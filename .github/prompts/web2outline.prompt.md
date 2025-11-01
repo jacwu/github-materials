@@ -1,8 +1,5 @@
-## Goal
-
-Your goal is to generate an outline for a PowerPoint presentation based on the content of a given webpage.
 
 ## Steps
 
-1. **Webpage Fetch**: Call web2md tool against target webpage, save md file into articles folder.
-2. **Outline Creation**: Call outline tool against the saved md file, save outline into articles folder.
+1. Call custom agent Web2MD, save md file into folder ./articles
+2. Call custom agent PPTOutline, save md file into folder ./articles
