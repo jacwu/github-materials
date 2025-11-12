@@ -4,10 +4,6 @@
 
 
 
-
-
-
-
 class Data {
 public:
     std::string name;
