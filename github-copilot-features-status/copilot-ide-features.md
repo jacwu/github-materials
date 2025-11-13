@@ -13,7 +13,7 @@
 | GPT-5 mini                 | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | GPT-5-Codex                | ✅      | ❌            | ❌        | ❌    | ❌      | ❌  |
 | Grok Code Fast 1           | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
-| Auto                       | ✅      | ❌            | ❌        | ❌    | ❌      | ❌  |
+| Auto                       | ✅      | ✅            | ❌        | ❌    | ❌      | ❌  |
 
 # GitHub Copilot Code Completion Features Comparison
 
@@ -40,7 +40,7 @@
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | MCP                      | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | MCP Server Registry      | ✅             | ❌             | ✅             | ✅     | ✅       | ❌  |
-| Web Fetch                | ✅             | ❌             | ❌             | ✅     | ❌       | ❌  |
+| Web Fetch                | ✅             | ✅             | ❌             | ✅     | ❌       | ❌  |
 | BYOK                     | ✅             | ✅             | ✅             | ✅     | ❌       | ❌  |
 | Debug View               | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 
