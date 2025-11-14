@@ -5,14 +5,17 @@
 | Claude Sonnet 4            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Sonnet 4.5          | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Opus 4.1            | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
-| Claude Haiku 4.5           | ✅      | ❌            | ❌        | ❌    | ❌      | ✅  |
+| Claude Haiku 4.5           | ✅      | ✅            | ✅        | ❌    | ❌      | ✅  |
 | Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5 mini                 | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
-| GPT-5-Codex                | ✅      | ❌            | ❌        | ❌    | ❌      | ❌  |
-| Grok Code Fast 1           | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
+| GPT-5-Codex                | ✅      | ❌            | ✅        | ❌    | ❌      | ❌  |
+| GPT-5.1                    | ✅      | ❌            | ✅        | ❌    | ❌      | ❌  |
+| GPT-5.1-Codex              | ✅      | ❌            | ✅        | ❌    | ❌      | ❌  |
+| GPT-5.1-Codex-Mini         | ✅      | ❌            | ✅        | ❌    | ❌      | ❌  |
+| xAI Grok Code Fast 1       | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Auto                       | ✅      | ✅            | ❌        | ❌    | ❌      | ❌  |
 
 # GitHub Copilot Code Completion Features Comparison
