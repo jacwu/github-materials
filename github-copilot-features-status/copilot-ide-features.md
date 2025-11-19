@@ -7,6 +7,7 @@
 | Claude Opus 4.1            | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Claude Haiku 4.5           | ✅      | ✅            | ✅        | ❌    | ❌      | ✅  |
 | Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
+| Gemini 3 Pro               | ✅      | ❌            | ❌        | ❌    | ❌      | ✅  |
 | GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
@@ -23,7 +24,7 @@
 | Code Completion Features | VS Code | Visual Studio | JetBrains | Xcode | Eclipse | CLI |
 |--------------------------|---------|---------------|-----------|-------|---------|-----|
 | Code Completion          | ✅       | ✅             | ✅         | ✅     | ✅       | ❌  |
-| Next Edit Suggestion     | ✅       | ✅             | ✅         | ❌     | ✅       | ❌  |
+| Next Edit Suggestion     | ✅       | ✅             | ✅         | ✅     | ✅       | ❌  |
 | Content Exclusion        | ✅       | ✅             | ✅         | ✅     | ❌       | ❌  |
 
 # GitHub Copilot Chat/Edit Features Comparison
@@ -36,8 +37,8 @@
 | Plan Mode                | ✅             | ❌             | ✅             | ✅     | ✅       | ❌  |
 | Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Custom Agent             | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
-| Sub Agent                | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
-| Slash Commands           | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
+| Isolated SubAgent        | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
+| Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Content Exclusion        | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
@@ -50,9 +51,6 @@
 | Debug View               | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Delegate Coding Agent    | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 
-
-> [!NOTE]
-> You can use [Fetch MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) in Jetbrains/Visual Studio/Xcode to fetch webpage.
 
 # GitHub Copilot Instruction Features Comparison
 

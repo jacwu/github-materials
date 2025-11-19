@@ -78,6 +78,11 @@
                     "MYSQL_DB": "<db>",
                     "MYSQL_SSL": "true"
                 }   
+            },
+            "ado": {
+                "type": "stdio",
+                "command": "npx",
+                "args": ["-y", "@azure-devops/mcp", "<orgname>", "--authentication", "envvar"]
             }
     }
 }
