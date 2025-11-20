@@ -2,8 +2,6 @@
 #include <vector>
 #include <string>
 
-
-
 class Data {
 public:
     std::string name;
