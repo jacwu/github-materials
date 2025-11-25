@@ -18,6 +18,7 @@
 | Coding Agent - Org Instruction    | ✅ | ❌ | ❌        | ✅          |
 | Coding Agent - PR Template        | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - @Copilot           | ✅ | ✅ | ✅        | ✅          |
+| Coding Agent - Self Host Runner   | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - code scanning alert| ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - security/quality validation| ✅ | ✅ | ✅        | ✅          |
 | Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
