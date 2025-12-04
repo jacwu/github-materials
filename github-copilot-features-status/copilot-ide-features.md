@@ -64,7 +64,7 @@
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       | ❌  |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       | ❌  |
 | Reusable Prompt File                 | ✅       | ❌             | ✅         | ✅     | ❌       | ❌  |
-| AGENTS.md                            | ✅       | ❌             | ❌         | ❌     | ❌       | ✅  |
+| AGENTS.md                            | ✅       | ❌             | ✅         | ❌     | ❌       | ✅  |
 
 # GitHub Copilot Misc Features Comparison
 
