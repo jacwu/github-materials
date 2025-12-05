@@ -5,7 +5,7 @@
 | Claude Sonnet 4            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Sonnet 4.5          | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Opus 4.1            | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
-| Claude Opus 4.5            | ✅      | ❌            | ❌        | ❌    | ❌      | ✅  |
+| Claude Opus 4.5            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Haiku 4.5           | ✅      | ✅            | ✅        | ❌    | ❌      | ✅  |
 | Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Gemini 3 Pro               | ✅      | ❌            | ❌        | ❌    | ❌      | ✅  |
@@ -17,6 +17,7 @@
 | GPT-5.1                    | ✅      | ❌            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5.1-Codex              | ✅      | ❌            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5.1-Codex-Mini         | ✅      | ❌            | ✅        | ✅    | ✅      | ✅  |
+| GPT-5.1-Codex-Max          | ✅      | ❌            | ❌        | ❌    | ❌      | ✅  |
 | Grok Code Fast 1           | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Auto                       | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 
@@ -50,7 +51,7 @@
 | Web Fetch                | ✅             | ✅             | ❌             | ✅     | ❌       | ❌  |
 | BYOK                     | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Debug View               | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
-| Delegate Coding Agent    | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
+| Delegate Coding Agent    | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 
 
 # GitHub Copilot Instruction Features Comparison

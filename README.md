@@ -3,7 +3,7 @@
 The `github-copilot-features-status` folder shows the main features of GitHub Copilot:
 
 - `copilot-ide-features.md` - Detailed comparison of Copilot features across different IDEs
-- `copilot-web-features.md` - Overview of GitHub Copilot features in web interface
+- `copilot-cloud-features.md` - Overview of GitHub Copilot features in github cloud
 
 ## github-copilot-features
 
