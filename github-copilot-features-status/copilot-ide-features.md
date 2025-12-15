@@ -8,16 +8,16 @@
 | Claude Opus 4.5            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Haiku 4.5           | ✅      | ✅            | ✅        | ❌    | ❌      | ✅  |
 | Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
-| Gemini 3 Pro               | ✅      | ❌            | ❌        | ❌    | ❌      | ✅  |
+| Gemini 3 Pro               | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5 mini                 | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5-Codex                | ✅      | ❌            | ✅        | ✅    | ❌      | ❌  |
-| GPT-5.1                    | ✅      | ❌            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5.1-Codex              | ✅      | ❌            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5.1-Codex-Mini         | ✅      | ❌            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5.1-Codex-Max          | ✅      | ❌            | ❌        | ❌    | ❌      | ✅  |
+| GPT-5.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
+| GPT-5.1-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
+| GPT-5.1-Codex-Mini         | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
+| GPT-5.1-Codex-Max          | ✅      | ❌            | ❌        | ❌    | ❌      | ❌  |
 | Grok Code Fast 1           | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Auto                       | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 
@@ -39,7 +39,11 @@
 | Plan Mode                | ✅             | ❌             | ✅             | ✅     | ✅       | ❌  |
 | Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Custom Agent             | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
+| Enterprise Custom Agent  | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
+| Background Agent         | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Isolated SubAgent        | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
+| worktree                 | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
+| claude skill             | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Content Exclusion        | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
