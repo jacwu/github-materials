@@ -54,3 +54,5 @@ logs/
 temp-*
 
 .venv/
+
+.VS/

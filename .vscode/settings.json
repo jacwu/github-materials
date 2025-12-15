@@ -162,5 +162,9 @@
     "chat.useNestedAgentsMdFiles": true,
     // autoApprove is only support in user profile settings, not workspace settings
     "chat.tools.global.autoApprove": true,
-    "files.autoSaveDelay": 5000
+    "files.autoSaveDelay": 5000,
+    "chat.customAgentInSubagent.enabled": true,
+    "github.copilot.chat.cli.customAgents.enabled": true,
+    "github.copilot.chat.cli.mcp.enabled": true,
+    "github.copilot.chat.customAgents.showOrganizationAndEnterpriseAgents": true
 }

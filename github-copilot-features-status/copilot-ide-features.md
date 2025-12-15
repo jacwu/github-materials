@@ -42,6 +42,7 @@
 | Enterprise Custom Agent  | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Background Agent         | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Isolated SubAgent        | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
+| Run in Parallel          | ✅             | ✅             | ❌             | ❌     | ❌       | ❌  |
 | worktree                 | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | claude skill             | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
