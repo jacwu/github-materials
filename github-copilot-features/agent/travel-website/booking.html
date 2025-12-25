@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - TravelDream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Book Your Dream Trip</h1>
+            <p class="text-blue-100 text-lg">Complete the form below to reserve your adventure</p>
+        </div>
+    </section>
+
+    <!-- Progress Steps -->
+    <section class="py-8 px-4 bg-white border-b">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                    <span class="text-sm mt-2 text-blue-600 font-medium">Trip Details</span>
+                </div>
+                <div class="flex-1 h-1 bg-blue-600 mx-2"></div>
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                    <span class="text-sm mt-2 text-blue-600 font-medium">Travelers</span>
+                </div>
+                <div class="flex-1 h-1 bg-gray-300 mx-2"></div>
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-bold">3</div>
+                    <span class="text-sm mt-2 text-gray-500">Payment</span>
+                </div>
+                <div class="flex-1 h-1 bg-gray-300 mx-2"></div>
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-bold">4</div>
+                    <span class="text-sm mt-2 text-gray-500">Confirm</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Form -->
+                <div class="lg:col-span-2">
+                    <!-- Step 1: Trip Details -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-plane text-blue-600 mr-2"></i>
+                            Trip Details
+                        </h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Trip Type</label>
+                                <select class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>Select trip type</option>
+                                    <option>Beach Vacation</option>
+                                    <option>Adventure Travel</option>
+                                    <option>Cultural Experience</option>
+                                    <option>Romantic Getaway</option>
+                                    <option>Family Trip</option>
+                                    <option>Business Travel</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Destination</label>
+                                <select class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>Select destination</option>
+                                    <option>Paris, France</option>
+                                    <option>Tokyo, Japan</option>
+                                    <option>Maldives</option>
+                                    <option>Amalfi Coast, Italy</option>
+                                    <option>Swiss Alps</option>
+                                    <option>Bali, Indonesia</option>
+                                    <option>New York City, USA</option>
+                                    <option>Sydney, Australia</option>
+                                    <option>Kenya Safari</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Departure Date</label>
+                                <div class="relative">
+                                    <i class="fas fa-calendar absolute left-4 top-4 text-gray-400"></i>
+                                    <input type="date" class="w-full pl-12 pr-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Return Date</label>
+                                <div class="relative">
+                                    <i class="fas fa-calendar absolute left-4 top-4 text-gray-400"></i>
+                                    <input type="date" class="w-full pl-12 pr-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Number of Adults</label>
+                                <select class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>1 Adult</option>
+                                    <option>2 Adults</option>
+                                    <option>3 Adults</option>
+                                    <option>4 Adults</option>
+                                    <option>5+ Adults</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Number of Children</label>
+                                <select class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>0 Children</option>
+                                    <option>1 Child</option>
+                                    <option>2 Children</option>
+                                    <option>3 Children</option>
+                                    <option>4+ Children</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Traveler Information -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-users text-blue-600 mr-2"></i>
+                            Primary Traveler Information
+                        </h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">First Name</label>
+                                <input type="text" placeholder="Enter first name" class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                <input type="text" placeholder="Enter last name" class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <div class="relative">
+                                    <i class="fas fa-envelope absolute left-4 top-4 text-gray-400"></i>
+                                    <input type="email" placeholder="your@email.com" class="w-full pl-12 pr-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <div class="relative">
+                                    <i class="fas fa-phone absolute left-4 top-4 text-gray-400"></i>
+                                    <input type="tel" placeholder="+1 (555) 000-0000" class="w-full pl-12 pr-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Date of Birth</label>
+                                <input type="date" class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Passport Number</label>
+                                <input type="text" placeholder="Enter passport number" class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-medium mb-2">Special Requests</label>
+                            <textarea rows="3" placeholder="Any dietary requirements, accessibility needs, or special requests..." class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Add-ons -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-plus-circle text-blue-600 mr-2"></i>
+                            Optional Add-ons
+                        </h2>
+                        
+                        <div class="space-y-4">
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <div class="ml-4 flex-1">
+                                    <span class="font-medium text-gray-800">Travel Insurance</span>
+                                    <p class="text-sm text-gray-500">Comprehensive coverage for your peace of mind</p>
+                                </div>
+                                <span class="font-bold text-blue-600">+$99</span>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <div class="ml-4 flex-1">
+                                    <span class="font-medium text-gray-800">Airport Transfer</span>
+                                    <p class="text-sm text-gray-500">Private car pickup and drop-off</p>
+                                </div>
+                                <span class="font-bold text-blue-600">+$75</span>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <div class="ml-4 flex-1">
+                                    <span class="font-medium text-gray-800">Premium Hotel Upgrade</span>
+                                    <p class="text-sm text-gray-500">Upgrade to 5-star accommodation</p>
+                                </div>
+                                <span class="font-bold text-blue-600">+$299</span>
+                            </label>
+                            <label class="flex items-center p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <div class="ml-4 flex-1">
+                                    <span class="font-medium text-gray-800">Guided Tours</span>
+                                    <p class="text-sm text-gray-500">Professional local guides at each destination</p>
+                                </div>
+                                <span class="font-bold text-blue-600">+$199</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Payment -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-credit-card text-blue-600 mr-2"></i>
+                            Payment Information
+                        </h2>
+                        
+                        <div class="mb-6">
+                            <div class="flex gap-4 mb-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa" class="h-8">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard" class="h-8">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/200px-PayPal.svg.png" alt="PayPal" class="h-8">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label class="block text-gray-700 font-medium mb-2">Card Number</label>
+                                <div class="relative">
+                                    <i class="fas fa-credit-card absolute left-4 top-4 text-gray-400"></i>
+                                    <input type="text" placeholder="1234 5678 9012 3456" class="w-full pl-12 pr-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Expiry Date</label>
+                                <input type="text" placeholder="MM/YY" class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">CVV</label>
+                                <div class="relative">
+                                    <i class="fas fa-lock absolute left-4 top-4 text-gray-400"></i>
+                                    <input type="text" placeholder="123" class="w-full pl-12 pr-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-gray-700 font-medium mb-2">Cardholder Name</label>
+                                <input type="text" placeholder="Name on card" class="w-full px-4 py-3 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <span class="ml-3 text-gray-600">I agree to the <a href="#" class="text-blue-600 hover:underline">Terms & Conditions</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Order Summary</h3>
+                        
+                        <div class="mb-6">
+                            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&q=80" alt="Paris" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h4 class="font-bold text-gray-800">Paris, France</h4>
+                            <p class="text-sm text-gray-500">Romantic Getaway Package</p>
+                        </div>
+
+                        <div class="space-y-3 border-t pt-4">
+                            <div class="flex justify-between text-gray-600">
+                                <span>Base Price (2 Adults)</span>
+                                <span>$1,798</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Travel Insurance</span>
+                                <span>$99</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Airport Transfer</span>
+                                <span>$75</span>
+                            </div>
+                            <div class="flex justify-between text-gray-600">
+                                <span>Taxes & Fees</span>
+                                <span>$189</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t mt-4 pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-gray-800">Total</span>
+                                <span class="text-2xl font-bold text-blue-600">$2,161</span>
+                            </div>
+                        </div>
+
+                        <button class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition mt-6">
+                            <i class="fas fa-lock mr-2"></i>
+                            Complete Booking
+                        </button>
+
+                        <div class="mt-6 text-center">
+                            <div class="flex items-center justify-center text-green-600 mb-2">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                <span class="text-sm font-medium">Secure Payment</span>
+                            </div>
+                            <p class="text-xs text-gray-500">Your payment information is encrypted and secure</p>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">
+                                <i class="fas fa-phone-alt text-blue-600 mr-2"></i>
+                                Need Help?
+                            </h4>
+                            <p class="text-sm text-gray-600 mb-2">Our travel experts are available 24/7</p>
+                            <a href="tel:+15551234567" class="text-blue-600 font-medium hover:underline">+1 (555) 123-4567</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
