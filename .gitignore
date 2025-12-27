@@ -56,3 +56,6 @@ temp-*
 .venv/
 
 .VS/
+
+# GitHub temporary attachments
+.github/temp/

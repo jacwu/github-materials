@@ -1,0 +1,99 @@
+name: "Copilot Setup Steps"
+
+# Automatically run the setup steps when they are changed to allow for easy validation, and
+# allow manual testing through the repository's "Actions" tab
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  # The job MUST be called `copilot-setup-steps` or it will not be picked up by Copilot.
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+
+    # Set the permissions to the lowest permissions possible needed for your steps.
+    # Copilot will be given its own token for its operations.
+    permissions:
+      # If you want to clone the repository as part of your setup steps, for example to install dependencies, you'll need the `contents: read` permission. If you don't clone the repository in your setup steps, Copilot will do this for you automatically after the steps complete.
+      contents: read
+
+    # You can define any steps you want, and they will run before the agent starts.
+    # If you do not check out your code, Copilot will do this for you.
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Parse COPILOT_AGENT_PROMPT and extract attachments
+        env:
+          COPILOT_AGENT_INPUTS: ${{ inputs.COPILOT_AGENT_INPUTS }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          # Use a temp directory in the repo so Copilot agent can access it
+          ATTACHMENTS_DIR=".github/temp/attachments"
+          mkdir -p "$ATTACHMENTS_DIR"
+          rm -rf "$ATTACHMENTS_DIR"/* 2>/dev/null || true
+          
+          # Extract COPILOT_AGENT_PROMPT from COPILOT_AGENT_INPUTS (it's a nested JSON string)
+          PROMPT_BASE64=$(echo "$COPILOT_AGENT_INPUTS" | jq -r '.COPILOT_AGENT_PROMPT // empty')
+          
+          if [ -z "$PROMPT_BASE64" ]; then
+            echo "COPILOT_AGENT_PROMPT not found in inputs"
+            exit 0
+          fi
+          
+          echo "=== Decoding COPILOT_AGENT_PROMPT ==="
+          PROMPT_CONTENT=$(echo "$PROMPT_BASE64" | base64 -d)
+          echo "$PROMPT_CONTENT"
+          
+          # Extract issue description content between <issue_description> tags
+          ISSUE_BODY=$(echo "$PROMPT_CONTENT" | sed -n '/<issue_description>/,/<\/issue_description>/p' | sed 's/<[^>]*>//g')
+          echo "=== Issue Body ==="
+          echo "$ISSUE_BODY"
+          
+          # Extract all GitHub user-attachments URLs (covers both /files/ and /assets/ paths)
+          # URLs end with ) in markdown links or " in HTML attributes
+          ALL_URLS=$(echo "$PROMPT_CONTENT" | grep -oE 'https://github\.com/user-attachments/[^)"]+' | sort -u || true)
+          
+          if [ -z "$ALL_URLS" ]; then
+            echo "No attachment URLs found in COPILOT_AGENT_PROMPT"
+            exit 0
+          fi
+          
+          echo "=== Found Attachment URLs ==="
+          echo "$ALL_URLS"
+          
+          # Print extracted filenames
+          echo "=== Attachment Filenames ==="
+          echo "$ALL_URLS" | while read -r URL; do
+            if [ -n "$URL" ]; then
+              FILENAME=$(basename "$URL" | sed 's/?.*//')
+              echo "$FILENAME"
+            fi
+          done
+          
+          # Download each attachment
+          echo "$ALL_URLS" | while read -r URL; do
+            if [ -n "$URL" ]; then
+              FILENAME=$(basename "$URL" | sed 's/?.*//')
+              echo "Downloading: $URL -> $ATTACHMENTS_DIR/$FILENAME"
+              curl -L -H "Authorization: token ${PERSONAL_ACCESS_TOKEN}" \
+                "$URL" \
+                -o "$ATTACHMENTS_DIR/$FILENAME" || echo "Failed to download: $URL"
+            fi
+          done
+          
+          echo "=== Downloaded Files ==="
+          ls -la "$ATTACHMENTS_DIR"
+          
+          echo "=== Attachment File Paths ==="
+          for f in "$ATTACHMENTS_DIR"/*; do
+            if [ -f "$f" ]; then
+              echo "$f"
+            fi
+          done
+
