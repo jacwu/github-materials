@@ -1,0 +1,20 @@
+name: Print Issue Comment
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  print_comment:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Print the issue comment
+        run: echo "User commented: ${{ github.event.comment.body }}"
+
+      - name: Add 'hello' comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue comment ${{ github.event.issue.number }} --body "hello"

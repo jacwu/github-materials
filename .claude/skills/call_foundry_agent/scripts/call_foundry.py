@@ -2,8 +2,8 @@ import argparse
 import os
 import sys
 from dotenv import load_dotenv
-from azure.identity import AzureCliCredential
-from azure.ai.agents import AgentsClient
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
 
 load_dotenv()
 
@@ -11,9 +11,9 @@ def main():
     parser = argparse.ArgumentParser(description="Call an Azure Foundry Agent.")
     parser.add_argument("prompt", help="The prompt to send to the agent.")
     parser.add_argument(
-        "--agent-id",
-        default=os.environ.get("AZURE_AI_AGENT_ID"),
-        help="The ID of the agent to call. Defaults to AZURE_AI_AGENT_ID environment variable.",
+        "--agent-name",
+        default=os.environ.get("AZURE_AI_AGENT_NAME"),
+        help="The name of the agent to call. Defaults to AZURE_AI_AGENT_NAME environment variable.",
     )
     parser.add_argument(
         "--endpoint",
@@ -27,32 +27,31 @@ def main():
         print("Error: Azure AI Project Endpoint is required. Set AZURE_AI_PROJECT_ENDPOINT env var or use --endpoint.", file=sys.stderr)
         sys.exit(1)
     
-    if not args.agent_id:
-        print("Error: Agent ID is required. Set AZURE_AI_AGENT_ID env var or use --agent-id.", file=sys.stderr)
+    if not args.agent_name:
+        print("Error: Agent Name is required. Set AZURE_AI_AGENT_NAME env var or use --agent-name.", file=sys.stderr)
         sys.exit(1)
 
     try:
-        credential = AzureCliCredential()
-        with AgentsClient(endpoint=args.endpoint, credential=credential) as client:
-            # Create a thread and run the agent, then wait for completion
-            result = client.create_thread_and_process_run(
-                agent_id=args.agent_id,
-                thread={"messages": [{"role": "user", "content": args.prompt}]},
-            )
+        project_client = AIProjectClient(
+            endpoint=args.endpoint,
+            credential=DefaultAzureCredential(),
+        )
 
-            if result.status == "failed":
-                print(f"Run failed: {result.last_error}", file=sys.stderr)
-                sys.exit(1)
+        # Get an existing agent
+        agent = project_client.agents.get(agent_name=args.agent_name)
 
-            # Get the agent's response
-            messages = client.messages.list(thread_id=result.thread_id)
-            for message in messages:
-                if message.role == "assistant":
-                    for content in message.content:
-                        if hasattr(content, "text"):
-                            print(content.text.value)
+        openai_client = project_client.get_openai_client()
+
+        # Reference the agent to get a response
+        response = openai_client.responses.create(
+            input=[{"role": "user", "content": args.prompt}],
+            extra_body={"agent": {"name": agent.name, "type": "agent_reference"}},
+        )
+
+        print(response.output_text)
+
     except Exception as e:
-        print(f"An error occurred: {e}", file=sys.stderr)
+        print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 
 

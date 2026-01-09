@@ -6,7 +6,7 @@
 | Claude Sonnet 4.5          | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Opus 4.5            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Haiku 4.5           | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
-| Gemini 2.5 Pro             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
+| Gemini 3 Flash             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Gemini 3 Pro               | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |

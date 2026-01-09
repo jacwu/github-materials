@@ -19,5 +19,5 @@ Send a notification card to a Microsoft Teams channel using an Incoming Webhook.
 ### Example
 
 ```bash
-python .claude/skills/teams_notification/scripts/send_teams_notification.py --message "Hello **World**!" --title "Test Message"
+.venv/Scripts/python .claude/skills/teams_notification/scripts/send_teams_notification.py --message "Hello **World**!" --title "Test Message"
 ```
