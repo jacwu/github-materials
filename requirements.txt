@@ -13,4 +13,5 @@ selenium>=4.14.0
 webdriver-manager>=4.0.1
 agent-framework-azure-ai
 azure-identity
+openai
 azure-ai-projects>=2.0.0b1

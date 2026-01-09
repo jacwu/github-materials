@@ -1,0 +1,51 @@
+name: Call Foundry Agent on Issue Comment
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  call_foundry_agent:
+    if: github.actor != 'github-actions[bot]' && contains(github.event.comment.body, '@foundry')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install openai azure-identity azure-ai-projects==2.0.0b1 python-dotenv
+
+      - name: Call Foundry Agent and post response
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AZURE_AI_PROJECT_ENDPOINT: ${{ vars.AZURE_AI_PROJECT_ENDPOINT }}
+          AZURE_AI_AGENT_NAME: ${{ vars.AZURE_AI_AGENT_NAME }}
+        run: |
+          # Remove @foundry (case-insensitive) from the comment and trim whitespace
+          COMMENT_BODY="${{ github.event.comment.body }}"
+          PROMPT=$(echo "$COMMENT_BODY" | sed -E 's/@[Ff][Oo][Uu][Nn][Dd][Rr][Yy]//gi' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+
+          # Call the Python script and capture output (support multi-line)
+          python .github/skills/call_foundry_agent/scripts/call_foundry.py "$PROMPT" > response.txt
+
+          # Post the response as an issue comment
+          gh issue comment ${{ github.event.issue.number }} --repo "${{ github.repository }}" --body-file response.txt
