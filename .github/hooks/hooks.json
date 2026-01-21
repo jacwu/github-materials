@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "./scripts/session-start.sh",
+        "powershell": "./scripts/session-start.ps1",
+        "cwd": ".",
+        "timeoutSec": 30
+      }
+    ],
+    "sessionEnd": [
+      {
+        "type": "command",
+        "bash": "./scripts/session-end.sh",
+        "powershell": "./scripts/session-end.ps1",
+        "cwd": ".",
+        "timeoutSec": 30
+      }
+    ],
+    "userPromptSubmitted": [
+      {
+        "type": "command",
+        "bash": "./scripts/user-prompt-submitted.sh",
+        "powershell": "./scripts/user-prompt-submitted.ps1",
+        "cwd": ".",
+        "timeoutSec": 30
+      }
+    ]
+  }
+}

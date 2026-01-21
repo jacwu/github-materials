@@ -31,4 +31,5 @@
 | Explain Failed Action Job         | ✅ | ✅ | ✅        | ✅          |
 | Remote Index                      | ✅ | ✅ | ✅        | ✅          |
 | GitHub Models                     | ✅ | ✅ | ✅        | ✅          |
+| Copilot Memory                    | ✅ | ✅ | ✅        | ✅          |
 | GitHub Spark                      | ✅ | ❌ | ❌        | ✅          |

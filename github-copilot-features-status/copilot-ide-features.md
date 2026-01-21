@@ -46,6 +46,7 @@
 | Run in Parallel          | ✅             | ✅             | ❌             | ❌     | ❌       | ❌  |
 | Worktree                 | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Agent Skill              | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Hooks                    | ❌             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Content Exclusion        | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | @github                  | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
