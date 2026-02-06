@@ -1,5 +1,5 @@
 ---
-name: call-foundry-agent
+name: call_foundry_agent
 description: Call Foundry agent with a prompt and get the response.
 ---
 
@@ -17,5 +17,5 @@ Send a prompt to an Azure Foundry Agent and retrieve the response.
 ### Example
 
 ```bash
-.venv/Scripts/python .claude/skills/call_foundry_agent/scripts/call_foundry.py "search the latest news in 2026"
+.venv/Scripts/python .github/skills/call_foundry_agent/scripts/call_foundry.py "search the latest news in 2026"
 ```

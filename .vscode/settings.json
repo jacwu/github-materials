@@ -166,5 +166,10 @@
     "chat.customAgentInSubagent.enabled": true,
     "github.copilot.chat.cli.customAgents.enabled": true,
     "github.copilot.chat.cli.mcp.enabled": true,
-    "github.copilot.chat.customAgents.showOrganizationAndEnterpriseAgents": true
+    "github.copilot.chat.customAgents.showOrganizationAndEnterpriseAgents": true,
+    "chat.agent.thinking.collapsedTools": "withThinking",
+    "chat.agent.thinking.terminalTools": true,
+    "chat.tools.autoExpandFailures": true,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }
