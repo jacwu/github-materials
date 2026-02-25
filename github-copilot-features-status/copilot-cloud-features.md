@@ -16,14 +16,17 @@
 | Coding Agent - Web Search         | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - Copilot Instruction| ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - Org Instruction    | ✅ | ❌ | ❌        | ✅          |
+| Coding Agent - Claude             | ✅ | ❌ | ❌        | ✅          |
+| Coding Agent - Codex              | ✅ | ❌ | ❌        | ✅          |
 | Coding Agent - PR Template        | ✅ | ✅ | ✅        | ✅          |
-| Coding Agent - @Copilot           | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - Self Host Runner   | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - code scanning alert| ✅ | ✅ | ✅        | ✅          |
+| Coding Agent - code referencing   | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - security/quality validation| ✅ | ✅ | ✅        | ✅          |
+
 | Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |
-| Organization Custom Instruction   | ✅ | ❌ | ❌        | ✅          |
+| Organization Custom Instruction   | ✅ | ✅ | ✅        | ✅          |
 | Agent in Codespace                | ✅ | ✅ | ✅        | ✅          |
 | PR Summary Generation             | ✅ | ✅ | ✅        | ✅          |
 | Commit Message Generation         | ✅ | ✅ | ✅        | ✅          |

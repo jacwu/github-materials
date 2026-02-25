@@ -1,6 +1,9 @@
 $ErrorActionPreference = "Stop"
 
-$raw = [Console]::In.ReadToEnd()
+$stdin = [Console]::OpenStandardInput()
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+$reader = New-Object System.IO.StreamReader($stdin, $utf8NoBom, $true)
+$raw = $reader.ReadToEnd()
 if ([string]::IsNullOrWhiteSpace($raw)) {
     $raw = "{}"
 }
@@ -14,4 +17,4 @@ try {
     $compact = ($raw -replace "(\r?\n)+", " ").Trim()
 }
 
-Add-Content -Path "logs\session-start.jsonl" -Value $compact
+[System.IO.File]::AppendAllText((Join-Path $PWD "logs\session-start.jsonl"), $compact + [Environment]::NewLine, $utf8NoBom)

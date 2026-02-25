@@ -2,25 +2,20 @@
 
 | Models                     | VS Code | Visual Studio | JetBrains | Xcode | Eclipse | CLI |
 |----------------------------|---------|---------------|-----------|-------|---------|-----|
-| Claude Sonnet 4            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Sonnet 4.5          | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
+| Claude Sonnet 4.6          | ✅      | ✅            | ✅        | ❌    | ❌      | ✅  |
 | Claude Opus 4.5            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| Claude Opus 4.6            | ✅      | ✅            | ❌        | ❌    | ❌      | ✅  |
+| Claude Opus 4.6            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Haiku 4.5           | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
 | Gemini 3 Flash             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Gemini 3 Pro               | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| GPT-4.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| o4-mini                    | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
-| GPT-5                      | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5 mini                 | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5-Codex                | ✅      | ❌            | ✅        | ✅    | ❌      | ❌  |
+| Gemini 3.1 Pro             | ✅      | ✅            | ❌        | ❌    | ❌      | ❌  |
 | GPT-5.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5.2                    | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
 | GPT-5.1-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5.2-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5.1-Codex-Mini         | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
+| GPT-5.3-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5.1-Codex-Max          | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
-| Grok Code Fast 1           | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Auto                       | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 
 # GitHub Copilot Code Completion Features Comparison
@@ -50,7 +45,6 @@
 | Agent Skill              | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
 | Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Content Exclusion        | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
-| @github                  | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Vision                   | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
@@ -61,23 +55,26 @@
 | BYOK                     | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Debug View               | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Delegate Coding Agent    | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
-| Hooks                    | ❌             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Hooks                    | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | Mermaid Render           | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
-| Memory                   | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
-
+| Message Steer            | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Context Usage            | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Context Compact          | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 
 # GitHub Copilot Instruction Features Comparison
 
 | Instruction Features                 | VS Code | Visual Studio | JetBrains | Xcode | Eclipse | CLI |
 |--------------------------------------|---------|---------------|-----------|-------|---------|-----|
-| Custom  Instructions                 | ✅       | ✅             | ✅         | ✅     | ✅       | ✅  |
+| Custom  Instruction                  | ✅       | ✅             | ✅         | ✅     | ✅       | ✅  |
+| Organization Custom Instruction      | ✅       | ❌             | ❌         | ❌     | ❌       | ❌  |
 | Generate Commit Message              | ✅       | ✅             | ✅         | ❌     | ✅       | ❌  |
 | Generate PR Description              | ✅       | ✅             | ❌         | ❌     | ❌       | ❌  |
-| Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ❌       | ❌  |
+| Custom Commit Message Instruction    | ✅       | ✅             | ✅         | ❌     | ✅       | ❌  |
 | Custom Code Review Instruction       | ✅       | ❌             | ❌         | ❌     | ❌       | ❌  |
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       | ❌  |
 | Reusable Prompt File                 | ✅       | ✅             | ✅         | ✅     | ❌       | ❌  |
 | AGENTS.md                            | ✅       | ❌             | ✅         | ❌     | ❌       | ✅  |
+| CLAUDE.md                            | ✅       | ❌             | ❌         | ❌     | ❌       | ✅  |
 
 # GitHub Copilot Misc Features Comparison
 
