@@ -23,7 +23,6 @@
 | Coding Agent - code scanning alert| ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - code referencing   | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - security/quality validation| ✅ | ✅ | ✅        | ✅          |
-
 | Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |
 | Organization Custom Instruction   | ✅ | ✅ | ✅        | ✅          |
