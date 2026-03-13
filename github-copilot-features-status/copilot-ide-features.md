@@ -10,12 +10,8 @@
 | Gemini 3 Flash             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Gemini 3 Pro               | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Gemini 3.1 Pro             | ✅      | ✅            | ❌        | ❌    | ❌      | ❌  |
-| GPT-5.1                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5.2                    | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
-| GPT-5.1-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5.2-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5.3-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| GPT-5.1-Codex-Max          | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
+| GPT-5.4                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Auto                       | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 
 # GitHub Copilot Code Completion Features Comparison
@@ -32,19 +28,17 @@
 |--------------------------|---------------|---------------|---------------|-------|---------|-----|
 | Inline Chat Mode         | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Ask Mode                 | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
-| Edit Mode                | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Plan Mode                | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 | Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Custom Agent             | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 | Checkpoints              | ✅             | ❌             | ❌             | ✅     | ❌       | ❌  |
 | Enterprise Custom Agent  | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
-| Background Agent         | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
+| CLI Agent                | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | Isolated SubAgent        | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 | Run in Parallel          | ✅             | ✅             | ❌             | ❌     | ❌       | ❌  |
 | Worktree                 | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Agent Skill              | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
 | Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
-| Content Exclusion        | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Vision                   | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Voice Input              | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
@@ -55,10 +49,10 @@
 | BYOK                     | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Debug View               | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Delegate Coding Agent    | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
-| Hooks                    | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Hooks                    | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
 | Mermaid Render           | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Message Steer            | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
-| Context Usage            | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Context Usage            | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
 | Context Compact          | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 
 # GitHub Copilot Instruction Features Comparison
@@ -74,7 +68,7 @@
 | Custom PR Description Instruction    | ✅       | ❌             | ❌         | ❌     | ❌       | ❌  |
 | Reusable Prompt File                 | ✅       | ✅             | ✅         | ✅     | ❌       | ❌  |
 | AGENTS.md                            | ✅       | ❌             | ✅         | ❌     | ❌       | ✅  |
-| CLAUDE.md                            | ✅       | ❌             | ❌         | ❌     | ❌       | ✅  |
+| CLAUDE.md                            | ✅       | ❌             | ✅         | ❌     | ❌       | ✅  |
 
 # GitHub Copilot Misc Features Comparison
 
