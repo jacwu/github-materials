@@ -54,6 +54,7 @@
 | Message Steer            | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | Context Usage            | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
 | Context Compact          | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Plugin & Marketplace     | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 
 # GitHub Copilot Instruction Features Comparison
 
