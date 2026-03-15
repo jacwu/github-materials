@@ -1,0 +1,586 @@
+/* 
+ * Styles for Interactive Video Player
+ * Kids English Learning Platform - US-S003
+ */
+
+/* Container and Layout */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Custom Video Controls */
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-container:hover .video-controls {
+    opacity: 1;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.control-btn.active {
+    background: #4CAF50;
+}
+
+/* Progress Bar */
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-filled {
+    height: 100%;
+    background: linear-gradient(90deg, #FF6B6B, #FFD93D);
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.time-display {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Interactive Overlay - Base */
+.interactive-overlay,
+.completion-overlay,
+.error-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.overlay-content,
+.completion-content,
+.error-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.overlay-content h2,
+.completion-content h2,
+.error-content h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Vocabulary Exercise */
+.vocabulary-exercise {
+    text-align: center;
+}
+
+.word-display {
+    margin-bottom: 30px;
+}
+
+.word-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.word {
+    font-size: 36px;
+    color: #FF6B6B;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.pronunciation {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+}
+
+.definition {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 20px;
+    background: #F8F9FA;
+    border-radius: 10px;
+}
+
+.examples {
+    text-align: left;
+    margin: 20px 0;
+    padding: 20px;
+    background: #E3F2FD;
+    border-radius: 10px;
+}
+
+.examples h4 {
+    color: #1976D2;
+    margin-bottom: 10px;
+}
+
+.examples ul {
+    list-style: none;
+    padding: 0;
+}
+
+.examples li {
+    padding: 8px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.examples li:before {
+    content: "✓ ";
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Quiz Exercise */
+.quiz-exercise {
+    text-align: center;
+}
+
+.question {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    padding: 20px;
+    font-size: 18px;
+    border: 3px solid #DDD;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: #6C63FF;
+    background: #F0EFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+.option-btn.correct {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+    animation: pulse 0.5s;
+}
+
+.option-btn.incorrect {
+    border-color: #F44336;
+    background: #FFEBEE;
+    animation: shake 0.5s;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.feedback {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    animation: slideDown 0.3s;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.correct-feedback {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.incorrect-feedback {
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+.feedback .emoji {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feedback p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Pronunciation Exercise */
+.pronunciation-exercise {
+    text-align: center;
+}
+
+.instructions {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.phrase {
+    font-size: 32px;
+    color: #6C63FF;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 20px;
+    background: #F0EFFF;
+    border-radius: 12px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.pronunciation-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.btn-listen,
+.btn-record {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-listen {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-record {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-listen:hover,
+.btn-record:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-listen:active,
+.btn-record:active {
+    transform: scale(0.95);
+}
+
+.pronunciation-feedback {
+    margin-top: 20px;
+}
+
+.pronunciation-result {
+    padding: 20px;
+    background: #E8F5E9;
+    border-radius: 12px;
+    color: #2E7D32;
+}
+
+/* Action Buttons */
+.btn-continue,
+.btn-skip,
+.btn-replay,
+.btn-next {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.btn-continue {
+    background: linear-gradient(135deg, #4CAF50, #45B049);
+    color: white;
+}
+
+.btn-skip {
+    background: #E0E0E0;
+    color: #666;
+}
+
+.btn-replay {
+    background: linear-gradient(135deg, #FF6B6B, #FF5252);
+    color: white;
+}
+
+.btn-next {
+    background: linear-gradient(135deg, #6C63FF, #5A52D5);
+    color: white;
+}
+
+.btn-continue:hover,
+.btn-replay:hover,
+.btn-next:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-skip:hover {
+    background: #D0D0D0;
+}
+
+/* Completion Screen */
+.completion-content {
+    text-align: center;
+}
+
+.stars {
+    font-size: 48px;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+
+.summary {
+    margin: 30px 0;
+    padding: 25px;
+    background: #F8F9FA;
+    border-radius: 12px;
+}
+
+.summary p {
+    font-size: 18px;
+    margin: 12px 0;
+    color: #333;
+}
+
+.summary strong {
+    color: #6C63FF;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Error Screen */
+.error-content {
+    text-align: center;
+}
+
+.error-content button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #FF6B6B, #FF5252);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.error-content button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overlay-content,
+    .completion-content,
+    .error-content {
+        padding: 25px;
+        width: 95%;
+    }
+    
+    .options {
+        grid-template-columns: 1fr;
+    }
+    
+    .word-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .word {
+        font-size: 28px;
+    }
+    
+    .question,
+    .phrase {
+        font-size: 20px;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    .video-controls {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .control-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Accessibility */
+.control-btn:focus,
+.option-btn:focus,
+.btn-continue:focus,
+.btn-skip:focus,
+.btn-replay:focus,
+.btn-next:focus {
+    outline: 3px solid #6C63FF;
+    outline-offset: 2px;
+}
+
+/* Loading State */
+.loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #6C63FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
