@@ -30,14 +30,14 @@
 | Ask Mode                 | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Plan Mode                | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 | Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
-| Custom Agent             | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
+| Custom Agent             | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Checkpoints              | ✅             | ❌             | ❌             | ✅     | ❌       | ❌  |
 | Enterprise Custom Agent  | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | CLI Agent                | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | Isolated SubAgent        | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 | Run in Parallel          | ✅             | ✅             | ❌             | ❌     | ❌       | ❌  |
 | Worktree                 | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
-| Agent Skill              | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
+| Agent Skill              | ✅             | ✅             | ✅             | ❌     | ❌       | ✅  |
 | Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
 | Vision                   | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
@@ -55,6 +55,7 @@
 | Context Usage            | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
 | Context Compact          | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | Plugin & Marketplace     | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| Offline Mode             | ❌             | ❌             | ❌             | ❌     | ❌       | ✅  |
 
 # GitHub Copilot Instruction Features Comparison
 

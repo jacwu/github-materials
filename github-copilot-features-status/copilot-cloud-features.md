@@ -22,6 +22,7 @@
 | Coding Agent - Self Host Runner   | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - code scanning alert| ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - code referencing   | ✅ | ✅ | ✅        | ✅          |
+| Coding Agent - merge conflict     | ✅ | ✅ | ✅        | ✅          |
 | Coding Agent - security/quality validation| ✅ | ✅ | ✅        | ✅          |
 | Code Review Agent                 | ✅ | ✅ | ✅        | ✅          |
 | Personal Instructions in Chat     | ✅ | ✅ | ✅        | ✅          |
@@ -32,6 +33,5 @@
 | Guideline for Code Review         | ✅ | ❌ | ❌        | ✅          |
 | Explain Failed Action Job         | ✅ | ✅ | ✅        | ✅          |
 | Remote Index                      | ✅ | ✅ | ✅        | ✅          |
-| GitHub Models                     | ✅ | ✅ | ✅        | ✅          |
 | Copilot Memory                    | ✅ | ✅ | ✅        | ✅          |
 | GitHub Spark                      | ✅ | ❌ | ❌        | ✅          |
