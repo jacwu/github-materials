@@ -4,15 +4,15 @@
 |----------------------------|---------|---------------|-----------|-------|---------|-----|
 | Claude Sonnet 4.5          | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Sonnet 4.6          | ✅      | ✅            | ✅        | ❌    | ❌      | ✅  |
-| Claude Opus 4.5            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Opus 4.6            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
+| Claude Opus 4.7            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Haiku 4.5           | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
 | Gemini 3 Flash             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Gemini 3 Pro               | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Gemini 3.1 Pro             | ✅      | ✅            | ❌        | ❌    | ❌      | ❌  |
 | GPT-5.3-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | GPT-5.4                    | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
-| Auto                       | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
+| Auto                       | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 
 # GitHub Copilot Code Completion Features Comparison
 
@@ -31,7 +31,8 @@
 | Plan Mode                | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 | Agent Mode               | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Custom Agent             | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
-| Checkpoints              | ✅             | ❌             | ❌             | ✅     | ❌       | ❌  |
+| Claude Agent             | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
+| Codex Agent              | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Enterprise Custom Agent  | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | CLI Agent                | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
 | Isolated SubAgent        | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
@@ -46,7 +47,7 @@
 | MCP Server Registry      | ✅             | ❌             | ✅             | ✅     | ✅       | ❌  |
 | MCP Apps                 | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Web Fetch                | ✅             | ✅             | ❌             | ✅     | ❌       | ❌  |
-| BYOK                     | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
+| BYOK                     | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Debug View               | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Delegate Coding Agent    | ✅             | ✅             | ✅             | ✅     | ✅       | ✅  |
 | Hooks                    | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
