@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelDream - Your Dream Vacation Awaits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-plane text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-2xl font-bold text-blue-600">TravelDream</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" onclick="loadPage('home.html')" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="#destinations" onclick="loadPage('destinations.html')" class="text-gray-700 hover:text-blue-600 font-medium transition">Destinations</a>
+                    <a href="#booking" onclick="loadPage('booking.html')" class="text-gray-700 hover:text-blue-600 font-medium transition">Book Now</a>
+                    <a href="#about" onclick="loadPage('about.html')" class="text-gray-700 hover:text-blue-600 font-medium transition">About Us</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" onclick="loadPage('home.html')" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#destinations" onclick="loadPage('destinations.html')" class="block py-2 text-gray-700 hover:text-blue-600">Destinations</a>
+                <a href="#booking" onclick="loadPage('booking.html')" class="block py-2 text-gray-700 hover:text-blue-600">Book Now</a>
+                <a href="#about" onclick="loadPage('about.html')" class="block py-2 text-gray-700 hover:text-blue-600">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="pt-16">
+        <iframe id="content-frame" src="home.html" class="w-full min-h-screen border-0"></iframe>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-plane text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">TravelDream</span>
+                    </div>
+                    <p class="text-gray-400">Making your travel dreams come true since 2010. Explore the world with us.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" onclick="loadPage('home.html')" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#" onclick="loadPage('destinations.html')" class="hover:text-white transition">Destinations</a></li>
+                        <li><a href="#" onclick="loadPage('booking.html')" class="hover:text-white transition">Book Now</a></li>
+                        <li><a href="#" onclick="loadPage('about.html')" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Travel Street, NYC</li>
+                        <li><i class="fas fa-phone mr-2"></i>+1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@traveldream.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 TravelDream. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function loadPage(page) {
+            document.getElementById('content-frame').src = page;
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Adjust iframe height based on content
+        document.getElementById('content-frame').onload = function() {
+            try {
+                this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
+            } catch(e) {
+                this.style.height = '100vh';
+            }
+        };
+    </script>
+</body>
+</html>
