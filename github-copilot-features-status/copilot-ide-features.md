@@ -7,7 +7,7 @@
 | Claude Opus 4.6            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Opus 4.7            | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Claude Haiku 4.5           | ✅      | ✅            | ✅        | ✅    | ❌      | ✅  |
-| Gemini 3 Flash             | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
+| Gemini 3.5 Flash           | ✅      | ✅            | ✅        | ✅    | ✅      | ❌  |
 | Gemini 3 Pro               | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
 | Gemini 3.1 Pro             | ✅      | ✅            | ❌        | ❌    | ❌      | ❌  |
 | GPT-5.3-Codex              | ✅      | ✅            | ✅        | ✅    | ✅      | ✅  |
@@ -34,10 +34,10 @@
 | Claude Agent             | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Codex Agent              | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
 | Enterprise Custom Agent  | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
-| CLI Agent                | ✅             | ❌             | ❌             | ❌     | ❌       | ✅  |
+| CLI Agent                | ✅             | ❌             | ✅             | ❌     | ❌       | ✅  |
 | Isolated SubAgent        | ✅             | ❌             | ✅             | ✅     | ✅       | ✅  |
 | Run in Parallel          | ✅             | ✅             | ❌             | ❌     | ❌       | ❌  |
-| Worktree                 | ✅             | ❌             | ❌             | ❌     | ❌       | ❌  |
+| Worktree                 | ✅             | ❌             | ✅             | ❌     | ❌       | ❌  |
 | Agent Skill              | ✅             | ✅             | ✅             | ❌     | ❌       | ✅  |
 | Slash Command            | ✅             | ✅             | ✅             | ✅     | ✅       | ❌  |
 | Extension                | ✅             | ✅             | ✅             | ❌     | ❌       | ❌  |
