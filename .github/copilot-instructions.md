@@ -27,7 +27,4 @@ This framework is an integrated system of modules that guide the AI's behavior a
 4.  **[`instructions\testing-guidelines.md`](instructions/testing-guidelines.md)**: Principles for designing and implementing tests.
 5.  **[`instructions\personalize.md`](instructions/personalize.md)**: Personalization rules for the AI Assistant.
 
-<Custom Agent>  
-    All the custom agents are in the `./.github/agents/` directory.
-</Custom Agent>
 
