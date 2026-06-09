@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "node \"$HOME/.copilot/hooks/caveman-activate.js\"",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}
