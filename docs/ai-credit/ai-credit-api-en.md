@@ -10,8 +10,9 @@
 - [6. Create a Budget](#6-create-a-budget)
 - [7. Update a Budget](#7-update-a-budget)
 - [8. Delete a Budget](#8-delete-a-budget)
-- [9. Create a Usage Report Export](#9-create-a-usage-report-export)
-- [10. Get Usage Report Status](#10-get-usage-report-status)
+- [9. List Usage Report Exports](#9-list-usage-report-exports)
+- [10. Create a Usage Report Export](#10-create-a-usage-report-export)
+- [11. Get Usage Report Status](#11-get-usage-report-status)
 
 ---
 
@@ -472,7 +473,52 @@ curl -X DELETE \
 
 ---
 
-## 9. Create a Usage Report Export
+## 9. List Usage Report Exports
+
+`GET /enterprises/{enterprise}/settings/billing/reports`
+
+Lists usage report export jobs created under the enterprise. The response includes each export job's status and download links for completed jobs.
+
+### List Usage Report Exports Parameters
+
+| Parameter | Location | Type | Description |
+| --- | --- | --- | --- |
+| enterprise | path | string | Enterprise slug |
+
+### List Usage Report Exports Example Request
+
+```bash
+curl -X GET \
+  -H "Authorization: Bearer <token>" \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2026-03-10" \
+  "https://api.github.com/enterprises/<enterprise_slug>/settings/billing/reports"
+```
+
+### List Usage Report Exports Example Response
+
+```json
+{
+  "usage_report_exports": [
+    {
+      "id": "<report_id>",
+      "report_type": "ai_credit",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-01",
+      "status": "completed",
+      "created_at": "2026-06-01T07:14:02Z",
+      "actor": "<username>",
+      "download_urls": [
+        "<download_url>"
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 10. Create a Usage Report Export
 
 `POST /enterprises/{enterprise}/settings/billing/reports`
 
@@ -519,7 +565,7 @@ curl -X POST \
 
 ---
 
-## 10. Get Usage Report Status
+## 11. Get Usage Report Status
 
 `GET /enterprises/{enterprise}/settings/billing/reports/{report_id}`
 

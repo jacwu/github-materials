@@ -10,8 +10,9 @@
 - [6. 创建预算](#6-创建预算)
 - [7. 修改预算](#7-修改预算)
 - [8. 删除预算](#8-删除预算)
-- [9. 创建用量报告导出](#9-创建用量报告导出)
-- [10. 查询用量报告状态](#10-查询用量报告状态)
+- [9. 查询用量报告导出列表](#9-查询用量报告导出列表)
+- [10. 创建用量报告导出](#10-创建用量报告导出)
+- [11. 查询用量报告状态](#11-查询用量报告状态)
 
 ---
 
@@ -472,7 +473,52 @@ curl -X DELETE \
 
 ---
 
-## 9. 创建用量报告导出
+## 9. 查询用量报告导出列表
+
+`GET /enterprises/{enterprise}/settings/billing/reports`
+
+列出 enterprise 下已创建的用量报告导出任务。返回结果包含每个导出任务的状态，以及已完成任务的下载链接。
+
+### 查询用量报告导出列表参数
+
+| 参数 | 位置 | 类型 | 说明 |
+| --- | --- | --- | --- |
+| enterprise | path | string | 企业 slug |
+
+### 查询用量报告导出列表示例请求
+
+```bash
+curl -X GET \
+  -H "Authorization: Bearer <token>" \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2026-03-10" \
+  "https://api.github.com/enterprises/<enterprise_slug>/settings/billing/reports"
+```
+
+### 查询用量报告导出列表示例响应
+
+```json
+{
+  "usage_report_exports": [
+    {
+      "id": "<report_id>",
+      "report_type": "ai_credit",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-01",
+      "status": "completed",
+      "created_at": "2026-06-01T07:14:02Z",
+      "actor": "<username>",
+      "download_urls": [
+        "<download_url>"
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## 10. 创建用量报告导出
 
 `POST /enterprises/{enterprise}/settings/billing/reports`
 
@@ -519,7 +565,7 @@ curl -X POST \
 
 ---
 
-## 10. 查询用量报告状态
+## 11. 查询用量报告状态
 
 `GET /enterprises/{enterprise}/settings/billing/reports/{report_id}`
 
