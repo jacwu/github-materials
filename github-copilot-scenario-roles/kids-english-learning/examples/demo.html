@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Lesson - Kids English Learning</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .page-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .lesson-info {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lesson-info h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .lesson-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: #F0EFFF;
+            border-radius: 20px;
+            color: #6C63FF;
+            font-weight: 500;
+        }
+        
+        .video-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Demo placeholder for video */
+        .demo-video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1>🎓 Kids English Learning Platform</h1>
+        <p>Interactive Video Lessons - Making Learning Fun!</p>
+    </div>
+    
+    <div class="lesson-info">
+        <h2 id="lesson-title">Greetings and Introductions</h2>
+        <p id="lesson-description">Learn how to greet people and introduce yourself in English</p>
+        <div class="lesson-meta">
+            <span class="meta-item">
+                <span>⏱️</span>
+                <span id="lesson-duration">5 minutes</span>
+            </span>
+            <span class="meta-item">
+                <span>📊</span>
+                <span id="lesson-difficulty">Beginner</span>
+            </span>
+            <span class="meta-item">
+                <span>🎯</span>
+                <span id="lesson-checkpoints">5 activities</span>
+            </span>
+        </div>
+    </div>
+    
+    <div class="video-wrapper">
+        <div class="video-container">
+            <!-- In production, this would be an actual video element -->
+            <!-- For demo purposes, showing a placeholder -->
+            <div class="demo-video-placeholder">
+                <div>
+                    <h3>🎬 Video Player Demo</h3>
+                    <p style="margin-top: 20px;">
+                        In production, this would display the actual video lesson.<br>
+                        The interactive video player would pause at specific timestamps<br>
+                        to show vocabulary, quizzes, and pronunciation exercises.
+                    </p>
+                    <button onclick="showDemoCheckpoint()" style="
+                        margin-top: 30px;
+                        padding: 15px 40px;
+                        font-size: 18px;
+                        border: none;
+                        border-radius: 25px;
+                        background: linear-gradient(135deg, #4CAF50, #45B049);
+                        color: white;
+                        cursor: pointer;
+                        font-weight: bold;
+                    ">
+                        Try Demo Checkpoint
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Actual video element (commented out for demo) -->
+            <!--
+            <video id="lesson-video" preload="metadata">
+                <source src="path/to/video.mp4" type="video/mp4">
+                <track kind="subtitles" src="path/to/subtitles.vtt" srclang="en" label="English" default>
+                Your browser does not support the video tag.
+            </video>
+            -->
+        </div>
+    </div>
+    
+    <!-- Load scripts -->
+    <script src="../src/lesson-data.js"></script>
+    <script src="../src/interactive-video-player.js"></script>
+    
+    <script>
+        // Demo: Show an example checkpoint
+        function showDemoCheckpoint() {
+            const demoCheckpoint = {
+                id: 'demo-cp-1',
+                timestamp: 30,
+                type: 'vocabulary',
+                title: 'New Word: Hello',
+                data: {
+                    word: 'Hello',
+                    pronunciation: '/həˈloʊ/',
+                    definition: 'A greeting used when you meet someone',
+                    imageUrl: 'https://via.placeholder.com/200x200/FF6B6B/FFFFFF?text=Hello',
+                    examples: [
+                        'Hello! How are you?',
+                        'Hello, nice to meet you!'
+                    ]
+                }
+            };
+            
+            // Create a temporary player instance for demo
+            const demoPlayer = {
+                createInteractiveOverlay: InteractiveVideoPlayer.prototype.createInteractiveOverlay,
+                onCheckpointComplete: function(checkpointId, isCorrect) {
+                    alert(`Checkpoint completed! In production, the video would resume here.`);
+                    document.querySelector('.interactive-overlay').remove();
+                },
+                logEvent: function(event, data) {
+                    console.log('Event:', event, data);
+                }
+            };
+            
+            window.videoPlayer = demoPlayer;
+            const overlay = demoPlayer.createInteractiveOverlay(demoCheckpoint);
+            document.body.appendChild(overlay);
+        }
+        
+        // In production, initialize the actual video player
+        /*
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoElement = document.getElementById('lesson-video');
+            const lessonData = sampleLessons.lesson1;
+            
+            // Initialize the interactive video player
+            window.videoPlayer = new InteractiveVideoPlayer(videoElement, lessonData, {
+                autoplay: false,
+                showControls: true,
+                enableSubtitles: true
+            });
+            
+            // Update lesson info
+            document.getElementById('lesson-title').textContent = lessonData.title;
+            document.getElementById('lesson-description').textContent = lessonData.description;
+            document.getElementById('lesson-duration').textContent = 
+                Math.floor(lessonData.duration / 60) + ' minutes';
+            document.getElementById('lesson-difficulty').textContent = 
+                lessonData.difficulty.charAt(0).toUpperCase() + lessonData.difficulty.slice(1);
+            document.getElementById('lesson-checkpoints').textContent = 
+                lessonData.checkpoints.length + ' activities';
+        });
+        */
+    </script>
+    
+    <div style="background: white; border-radius: 12px; padding: 30px; margin: 30px auto; max-width: 1200px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+        <h2 style="color: #333; margin-bottom: 20px;">📚 How It Works</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div style="padding: 20px; background: #E3F2FD; border-radius: 12px;">
+                <h3 style="color: #1976D2; margin-bottom: 10px;">1️⃣ Watch Video</h3>
+                <p style="color: #333;">The lesson plays like a normal video with fun, engaging content.</p>
+            </div>
+            
+            <div style="padding: 20px; background: #F3E5F5; border-radius: 12px;">
+                <h3 style="color: #7B1FA2; margin-bottom: 10px;">2️⃣ Interactive Pauses</h3>
+                <p style="color: #333;">The video pauses at key moments for vocabulary and exercises.</p>
+            </div>
+            
+            <div style="padding: 20px; background: #E8F5E9; border-radius: 12px;">
+                <h3 style="color: #388E3C; margin-bottom: 10px;">3️⃣ Practice & Learn</h3>
+                <p style="color: #333;">Complete quizzes and pronunciation exercises to reinforce learning.</p>
+            </div>
+            
+            <div style="padding: 20px; background: #FFF3E0; border-radius: 12px;">
+                <h3 style="color: #F57C00; margin-bottom: 10px;">4️⃣ Track Progress</h3>
+                <p style="color: #333;">Earn stars and badges as you complete lessons!</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #F0EFFF; border-radius: 12px;">
+            <h3 style="color: #6C63FF; margin-bottom: 15px;">✨ Features</h3>
+            <ul style="color: #333; line-height: 2;">
+                <li>📺 Interactive video player with custom controls</li>
+                <li>📖 Vocabulary pop-ups with images and examples</li>
+                <li>❓ Comprehension quizzes with instant feedback</li>
+                <li>🎤 Pronunciation exercises (speech recognition ready)</li>
+                <li>💾 Progress tracking and resume from where you left off</li>
+                <li>⭐ Achievement system with stars and badges</li>
+                <li>🎨 Child-friendly, colorful interface</li>
+                <li>♿ Accessible with keyboard navigation and screen reader support</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
