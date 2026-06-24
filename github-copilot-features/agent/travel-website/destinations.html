@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - TravelDream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Explore Destinations</h1>
+            <p class="text-blue-100 text-lg mb-8">Find your perfect getaway from our curated selection</p>
+            
+            <!-- Search and Filter -->
+            <div class="bg-white rounded-xl p-6 shadow-lg max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="relative">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                        <input type="text" placeholder="Search destinations..." class="w-full pl-10 pr-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <select class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>All Regions</option>
+                            <option>Europe</option>
+                            <option>Asia</option>
+                            <option>Americas</option>
+                            <option>Africa</option>
+                            <option>Oceania</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Price Range</option>
+                            <option>Under $500</option>
+                            <option>$500 - $1000</option>
+                            <option>$1000 - $2000</option>
+                            <option>$2000+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Trip Type</option>
+                            <option>Beach</option>
+                            <option>Adventure</option>
+                            <option>Cultural</option>
+                            <option>Romantic</option>
+                            <option>Family</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="py-8 px-4 bg-white border-b">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-full font-medium">All</button>
+                <button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-blue-100 transition">Europe</button>
+                <button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-blue-100 transition">Asia</button>
+                <button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-blue-100 transition">Americas</button>
+                <button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-blue-100 transition">Africa</button>
+                <button class="px-6 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-blue-100 transition">Oceania</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Destination 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=500&q=80" alt="Paris" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.8
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Europe
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Paris, France</h3>
+                        <p class="text-gray-600 mb-4">Experience the romance of the City of Lights. Visit the Eiffel Tower, Louvre Museum, and charming cafes.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>5-7 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Spring/Fall</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$899</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=500&q=80" alt="Tokyo" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.9
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Asia
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tokyo, Japan</h3>
+                        <p class="text-gray-600 mb-4">Discover the perfect blend of ancient traditions and cutting-edge technology in Japan's vibrant capital.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>7-10 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Cherry Blossom</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$1,299</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=500&q=80" alt="Maldives" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.9
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Asia
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Maldives</h3>
+                        <p class="text-gray-600 mb-4">Escape to paradise with crystal-clear waters, white sandy beaches, and luxurious overwater villas.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>5-7 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Year-round</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$1,599</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=500&q=80" alt="Amalfi Coast" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.7
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Europe
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Amalfi Coast, Italy</h3>
+                        <p class="text-gray-600 mb-4">Drive along the stunning coastline, explore colorful villages, and indulge in authentic Italian cuisine.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>4-6 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Summer</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$1,099</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Swiss Alps" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.8
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Europe
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Swiss Alps, Switzerland</h3>
+                        <p class="text-gray-600 mb-4">Experience breathtaking mountain scenery, world-class skiing, and charming alpine villages.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>5-8 days</span>
+                            <span><i class="fas fa-snowflake mr-1"></i>Winter</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$1,499</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=500&q=80" alt="Bali" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.6
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Asia
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bali, Indonesia</h3>
+                        <p class="text-gray-600 mb-4">Discover tropical temples, lush rice terraces, pristine beaches, and vibrant cultural experiences.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>7-10 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Dry Season</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$799</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 7 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=500&q=80" alt="New York" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.7
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Americas
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">New York City, USA</h3>
+                        <p class="text-gray-600 mb-4">Experience the Big Apple with iconic landmarks, Broadway shows, and world-class dining.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>4-7 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Year-round</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$999</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 8 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=500&q=80" alt="Australia" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.8
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Oceania
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sydney, Australia</h3>
+                        <p class="text-gray-600 mb-4">Explore the iconic Opera House, beautiful beaches, and unique wildlife Down Under.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>10-14 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Summer</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$1,899</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 9 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=500&q=80" alt="Safari" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            <i class="fas fa-star mr-1"></i>4.9
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>Africa
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kenya Safari</h3>
+                        <p class="text-gray-600 mb-4">Witness the Great Migration and encounter amazing wildlife in their natural habitat.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <span><i class="fas fa-clock mr-1"></i>7-10 days</span>
+                            <span><i class="fas fa-sun mr-1"></i>Jul-Oct</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$2,499</span>
+                            <a href="#" onclick="parent.loadPage('booking.html')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12 gap-2">
+                <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 transition">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">1</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 transition">2</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 transition">3</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 transition">...</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg hover:bg-gray-300 transition">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Can't Find What You're Looking For?</h2>
+            <p class="text-blue-100 mb-8">Our travel experts can help you plan a custom trip tailored to your preferences</p>
+            <a href="#" onclick="parent.loadPage('about.html')" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                Contact Us <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

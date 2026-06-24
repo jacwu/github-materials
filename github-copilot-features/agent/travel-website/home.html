@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TravelDream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80');">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white px-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Discover Your Dream Destination</h1>
+                <p class="text-xl md:text-2xl mb-8">Explore the world's most beautiful places with us</p>
+                <div class="bg-white rounded-lg p-4 md:p-6 max-w-4xl mx-auto shadow-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="relative">
+                            <i class="fas fa-map-marker-alt absolute left-3 top-3 text-gray-400"></i>
+                            <input type="text" placeholder="Where to?" class="w-full pl-10 pr-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="relative">
+                            <i class="fas fa-calendar absolute left-3 top-3 text-gray-400"></i>
+                            <input type="date" class="w-full pl-10 pr-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="relative">
+                            <i class="fas fa-users absolute left-3 top-3 text-gray-400"></i>
+                            <select class="w-full pl-10 pr-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4+ Guests</option>
+                            </select>
+                        </div>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">
+                            <i class="fas fa-search mr-2"></i>Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Destinations</h2>
+            <p class="text-gray-600 text-lg">Explore our most popular travel destinations</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Destination Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&q=80" alt="Paris" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Popular</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Paris, France</h3>
+                    <p class="text-gray-600 mb-4">The city of love and lights</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="ml-1 text-gray-700">4.8</span>
+                        </div>
+                        <span class="text-blue-600 font-bold">From $899</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Destination Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&q=80" alt="Tokyo" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm">Trending</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Tokyo, Japan</h3>
+                    <p class="text-gray-600 mb-4">Where tradition meets future</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="ml-1 text-gray-700">4.9</span>
+                        </div>
+                        <span class="text-blue-600 font-bold">From $1,299</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Destination Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=400&q=80" alt="Maldives" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm">Hot Deal</div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Maldives</h3>
+                    <p class="text-gray-600 mb-4">Paradise on Earth</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="ml-1 text-gray-700">4.9</span>
+                        </div>
+                        <span class="text-blue-600 font-bold">From $1,599</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Destination Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=400&q=80" alt="Italy" class="w-full h-48 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amalfi Coast, Italy</h3>
+                    <p class="text-gray-600 mb-4">Mediterranean beauty</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="ml-1 text-gray-700">4.7</span>
+                        </div>
+                        <span class="text-blue-600 font-bold">From $1,099</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Packages -->
+    <section class="py-16 px-4 bg-blue-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Special Travel Packages</h2>
+                <p class="text-gray-600 text-lg">Exclusive deals crafted just for you</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500&q=80" alt="Romantic Getaway" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold">20% OFF</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Romantic Getaway</h3>
+                        <p class="text-gray-600 mb-4">7 days in Paris & Venice for couples</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                5-star hotels
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Private tours
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Candlelit dinners
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through">$2,499</span>
+                                <span class="text-2xl font-bold text-blue-600 ml-2">$1,999</span>
+                            </div>
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Package 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500&q=80" alt="Adventure Package" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold">Best Value</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Asian Adventure</h3>
+                        <p class="text-gray-600 mb-4">10 days in Tokyo, Seoul & Bangkok</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                All flights included
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Local guides
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Cultural experiences
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through">$3,299</span>
+                                <span class="text-2xl font-bold text-blue-600 ml-2">$2,799</span>
+                            </div>
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Package 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&q=80" alt="Beach Paradise" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full font-bold">Limited</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Beach Paradise</h3>
+                        <p class="text-gray-600 mb-4">5 days in Maldives luxury resort</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Overwater villa
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                All-inclusive meals
+                            </li>
+                            <li class="flex items-center text-gray-600">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Spa treatments
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-gray-400 line-through">$4,999</span>
+                                <span class="text-2xl font-bold text-blue-600 ml-2">$3,999</span>
+                            </div>
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose TravelDream?</h2>
+                <p class="text-gray-600 text-lg">We make your travel experience exceptional</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Safe Travels</h3>
+                    <p class="text-gray-600">Your safety is our top priority with 24/7 support</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-dollar-sign text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Best Prices</h3>
+                    <p class="text-gray-600">Guaranteed lowest prices with price match</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-orange-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock customer assistance</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Happy Customers</h3>
+                    <p class="text-gray-600">Over 100,000 satisfied travelers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">What Our Travelers Say</h2>
+                <p class="text-gray-600 text-lg">Real experiences from real people</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Amazing experience! The Paris trip was perfectly planned. Every detail was taken care of. Highly recommend TravelDream!"</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Michael" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The Asian Adventure package was incredible! Great value for money and unforgettable memories. Will book again!"</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emma" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-800">Emma Williams</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The Maldives beach paradise was a dream come true. Crystal clear waters and amazing service. Thank you TravelDream!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-4 bg-blue-600">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Get Exclusive Travel Deals</h2>
+            <p class="text-blue-100 mb-8">Subscribe to our newsletter and never miss special offers</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Enter your email" class="px-6 py-3 rounded-lg w-full md:w-96 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                <button class="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition">
+                    Subscribe <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Team" class="rounded-xl shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">About TravelDream</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2010, TravelDream has been helping travelers explore the world's most beautiful destinations. Our team of expert travel consultants works tirelessly to create unforgettable experiences.</p>
+                    <p class="text-gray-600 mb-6">With over 500 destinations worldwide and 100,000+ satisfied customers, we're your trusted partner for all your travel needs.</p>
+                    <div class="flex gap-8 mb-6">
+                        <div>
+                            <span class="text-3xl font-bold text-blue-600">500+</span>
+                            <p class="text-gray-600">Destinations</p>
+                        </div>
+                        <div>
+                            <span class="text-3xl font-bold text-blue-600">100K+</span>
+                            <p class="text-gray-600">Happy Travelers</p>
+                        </div>
+                        <div>
+                            <span class="text-3xl font-bold text-blue-600">14</span>
+                            <p class="text-gray-600">Years Experience</p>
+                        </div>
+                    </div>
+                    <a href="#" onclick="parent.loadPage('about.html')" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
